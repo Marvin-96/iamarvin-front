@@ -29,12 +29,12 @@ export default function Home({allPortfolioPost}) {
       <Frontsection />
         <Main>
         <section className='content'>   
-        <div data-aos="zoom-in" className='working-illustration'> <Image       src="http://localhost:8888/iamarvin-back/wp-content/uploads/2024/02/memodji-working.png"
+        <div data-aos="zoom-in" className='working-illustration'> <Image       src="https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2024/02/memodji-working.png"
                             width={686}
                             height={798}
                             alt="Picture of the author" /> </div>
 
-          <p data-aos="zoom-in"> J'aime imaginer, créer et prototyper. Me lancer dans des projets voir leurs evolutions Je suis à la recherche d’une Alternance d’une durée de deux ans en tant que designer UX/UI. </p>  
+          <p data-aos="zoom-in"> J'aime imaginer, créer et prototyper. Me lancer dans des projets voir leurs evolutions. </p>  
         
         </section>
 
