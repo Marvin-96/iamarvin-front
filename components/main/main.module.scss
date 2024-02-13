@@ -1,0 +1,16 @@
+.mainContent {
+    width: 100vw;
+    padding: 100px 30px;
+    // background-color: red;
+}
+
+
+@media (max-width: 701px) {
+.mainContent {
+    width: 100vw;
+    padding: 50px 30px;
+    
+}
+  }
+  
+

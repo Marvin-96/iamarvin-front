@@ -1,0 +1,48 @@
+
+
+.Jobdetail {
+    display: flex;
+    margin:  30px 0;
+    border-bottom: 2px solid;
+    justify-content: space-between;
+
+    h3 {
+        font-size: 30px;
+        font-weight: 600;
+        
+    }
+
+    p {
+        margin: 10px 0;
+    }
+    .jobDescription {
+        margin-bottom: 20px;
+        
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .Jobdata {
+        width: 100%;
+    }
+
+    .date {
+        // background-color: red;
+        margin: auto 0;
+    }
+    
+}
+
+@media  (max-width: 1035px) {
+    .Jobdetail {
+    .title {
+        display: block;
+        
+    }
+}
+  }
+  

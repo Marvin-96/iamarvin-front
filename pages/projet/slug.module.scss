@@ -1,0 +1,88 @@
+.frontImage {
+display: block;
+position: relative;
+aspect-ratio: 16/9;
+width: 100%;
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+
+   
+}
+}
+
+
+.renderStyle {
+    display: block !important;
+    color:   var(--textColor);
+    img {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    align-items: center;
+    align-content: center;
+    
+    
+}
+}
+
+.wrapContent  {
+
+    h1 {
+        margin:  50px 0;
+        font-size: 11vw;
+        word-break: break-all;
+    }
+
+    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    // background-color: red;
+
+    p {
+        margin: 30px 200px;
+        font-weight: 300;
+    }
+    strong {
+        color: var(--strongColor);
+    }
+
+    h1 {
+        font-size: var(--blogTitle);
+
+    }
+
+    h2 {
+        font-size: var(--titleSize);
+    }
+
+    h3 {
+        font-size: var(--titleSize);
+    }
+}
+
+.wrapContentCentered {
+    display: block;
+    width: 100vw;
+}
+
+.postdataContent {
+    
+    display: flex;
+    justify-content: center;
+    align-content: center !important;
+    
+    // width: 100%;
+    
+
+    div {
+    display: block;
+    width: 100%;
+
+    }
+
+}

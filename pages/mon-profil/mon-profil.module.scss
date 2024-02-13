@@ -1,0 +1,19 @@
+.section {
+    margin-top: 100px ;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    .jobPresetation  {
+        width: 70vw;
+    }
+}
+
+
+@media  (max-width: 1000px) {
+
+    .section {
+        .jobPresetation  {
+            width: 100vw;
+        }
+    }
+}

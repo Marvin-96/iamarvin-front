@@ -1,0 +1,12 @@
+.imgWrapper {  
+    border-radius: 20px;
+    overflow: hidden; 
+  }
+  
+  .innerImg {
+    transition: 0.3s;
+  }
+  
+  .innerImg:hover {
+    transform: scale(1.03);
+  }

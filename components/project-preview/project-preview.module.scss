@@ -1,0 +1,70 @@
+// .ProjectPreviewContainer {
+//   display: block;
+
+
+// h3 {
+//   font-size: 48px; 
+//   font-family: var(--title);
+// }
+
+// hr {
+//   border-bottom: 1px solid rgba(0, 0, 0, 1);
+//   min-width: 100%;
+// }
+
+// .ProjectPreviewWrapped {
+//   display: flex;
+//   justify-content: space-between;
+//   align-self: stretch;
+//   padding: 30px 0;
+
+//   img {
+//     // width: 676px ;
+//     // max-height: 350.28px ;
+//     width: 30vw ;
+//     max-height: 20vw ;
+//     object-fit: cover;
+//     object-position: 25% 25%;
+
+//   }
+// }
+
+// }
+
+
+
+// @media (max-width: 701px)   {
+//   .ProjectPreviewWrapped {
+//     display: block !important;
+//     // background-color: red;
+//   }
+// }
+
+
+.ProjectPreviewContainer {
+  // div {
+  // width: 40vw;
+  // }
+  img {
+    border-radius: var(--imgRadius);
+    width: var(--thumbWidth);
+    height: var(--thumHeight);
+    object-fit: cover;
+    object-position: 20% 20%;
+ 
+    
+  }
+  hr {
+    border: none;
+  }
+
+  h3 {
+    padding: 6px 0;
+    font-weight: 300;
+  }
+
+
+}
+
+
+

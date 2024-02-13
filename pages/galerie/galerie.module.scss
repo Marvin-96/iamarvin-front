@@ -1,0 +1,105 @@
+.PostGrid {
+    // background-color: red;
+    // flex-flow: column wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    // grid-auto-rows: minmax(100px, auto);
+    justify-items: start;
+    width: 65vw;
+
+    .AlbumPreview {
+      max-width: 200vw;
+      height: 50vw;
+      margin-bottom: 30px;
+    }
+
+    img {
+      width: 30vw;
+      height: 50vw;
+      object-fit: cover;
+      object-position: 25% 25%; 
+    }
+
+    p {
+      margin: 00px;
+    }
+
+    a {
+      color: var(--textColor);
+      text-decoration: none;
+
+    }
+    
+  }
+
+  .albumPresentation {
+    padding: 30px 0;
+  }
+
+.wrapContent {
+display: flex;
+justify-content: center;
+// background-color: red;
+
+  .frontImage {
+    text-align: center;
+    img {
+      width: 40%;
+      height: auto;
+      object-fit: cover;
+      object-position: 25% 25%; 
+      border-radius: 30px;
+    }
+  }
+  h1 {
+    font-size: 10vw;
+    text-align: center;
+  }
+}
+
+.renderStyle {
+  text-align: center;
+
+
+  img {
+    border-radius: 30px;
+    width: 40%;
+    height: auto;
+    margin: 30px 0;
+  }
+}
+
+
+  @media  (max-width: 700px) {
+    .PostGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .frontImage {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  
+  @media  (max-width: 500px) {
+      .PostGrid {
+        grid-template-columns: repeat(1, 1fr);   
+        width: 100%;   
+      
+
+      .AlbumPreview {
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+
+        img {
+
+          width: 100%;
+          height: auto;
+        }
+      }
+  }
+
+  }

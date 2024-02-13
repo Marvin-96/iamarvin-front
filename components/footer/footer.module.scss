@@ -1,0 +1,134 @@
+
+.footer {
+  background-color: var( --pimaryColor);
+  margin-top: 30vh;
+  color: var(--bgColor);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  .wrapped {
+    width: 95vw;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+
+  .socialSection {
+    border-top: solid 1px;
+    border-color: var(--bgColor);
+    padding: 2vh 0 ;
+    display: flex;
+    justify-content: space-between;
+
+    .links {
+      display: flex;
+      list-style: none;
+      li {
+      margin-left: 10px ;
+      fill: var(--bgColor);
+      a {
+      border: solid 1px;
+      border-radius: 30px;
+      padding: 10px 30px;
+      text-decoration: none;
+      color: #fff;
+      }
+      
+    }
+    }
+  }
+    
+
+    .footerSection {
+      
+      height: 20vh;
+      
+      display: flex;
+      margin: 40px 0px 60px 0px;
+      justify-content: space-between;
+
+
+
+      .logoSection {
+        justify-content: center;
+        display: flex;
+
+        
+
+        div {
+          font-size:  16px;
+        }
+      }
+    .linksection {
+              
+              display: flex;
+                      a {
+                        color: var(--bgColor);
+                        text-decoration: none;
+                      }
+                      
+                      li {
+                        padding: 10px 0;
+                        
+                        list-style: none;
+                        
+                      }
+
+               
+
+
+          }
+          .emailSection {
+
+            display: flex;
+       
+            background-color: none;
+        
+            // padding: 0 20vh;
+            
+
+          }
+
+    }
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+      display: block;
+      .footerSection {
+        display: block !important;
+        width: 100%;
+        
+
+        .logoSection {
+          justify-content: auto;
+          display: block;
+          
+        }
+
+
+      .wrapped {
+        width: auto;
+      }
+      // .linksection {
+      //   padding: 30px;
+      // }
+    
+      }
+          .linksection {
+            
+          li {
+            width: 100vw;
+          }
+        }
+
+      }
+      .linksection {
+              
+        display: block;
+      }
+
+}
