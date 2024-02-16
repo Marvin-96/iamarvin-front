@@ -14,7 +14,7 @@ const footerLink = [
     },
     {
       slug: "Mon Curriculum vitae",
-      link: "../",
+      link: "https://iamarvin.com/iamarvin_front/media/CV-Marvin-mensah2024_compressed.pdf",
       type: "lien"
     },
     {

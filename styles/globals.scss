@@ -278,7 +278,7 @@
 
 
 @media (min-width: 701px) and (max-width: 1500px) {
-  .PostGrid {
+  .PostGrid , .griddiv {
     // background-color: red;
     // flex-flow: column wrap;
     display: grid;
@@ -287,6 +287,8 @@
     grid-auto-rows: minmax(100px, auto);
     
   }
+
+  
 }
 
 .Jobwrapped {

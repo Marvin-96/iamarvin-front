@@ -74,7 +74,7 @@ export default function Home({allPortfolioPost}) {
       })}
       
           <div className='jobbutton' data-aos="fade-up" data-aos-duration={2}>
-            <a className='CVlink' href='public/media/CV-Marvin-mensah2024.pdf'> Voir mon Curriculum vitae</a>
+            <a className='CVlink' href='phttps://iamarvin.com/iamarvin_front/media/CV-Marvin-mensah2024_compressed.pdf'> Voir mon Curriculum vitae</a>
           </div>
      
           </div>
