@@ -5,7 +5,7 @@ export async function getAllPosts()  {
     const query = { 
         
         query: `query getAllposts {
-          posts(where: {orderby: {field: DATE, order: ASC}, categoryName: "article"}) {
+          posts(where: {orderby: {field: DATE, order: DESC}, categoryName: "article"}) {
             nodes {
               title
               date

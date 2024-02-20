@@ -9,6 +9,7 @@ import FeatureImage from '@/components/feature-image'
 import { getAllPosts } from '@/libs/posts'
 import Date from '@/components/date'
 import MainArticlePreview from '@/components/main-article-preview'
+import Head from 'next/head'
 
 export async function getStaticProps() {
   const allPosts = await getAllPosts();
@@ -25,7 +26,10 @@ export default function Blog({ allPosts }) {
 
   return (
     <>
-      {console.log(allPosts)}
+      <Head>
+        <title> Blog | Marvin Mensah</title>
+      </Head>
+
       <Main>
       <h1> Le blog </h1>
       <p> Bienvenue sur mon blog ! 🤓 Ici on parle de Design, de tech et bien autres !!</p>

@@ -7,6 +7,7 @@ import Main from '@/components/main'
 import FeatureImage from '@/components/feature-image'
 import { getAllGaleriePosts } from '@/libs/posts'
 import {PostGrid , AlbumPreview , albumPresentation } from './galerie.module.scss'
+import Head from 'next/head'
 
 
 export async function getStaticProps() {
@@ -25,6 +26,10 @@ export default function Galerie({ allGaleriePosts }) {
   return (
     <>
       {console.log(allGaleriePosts)}
+
+      <Head>
+        <title>Galerie | Marvin Mensah</title>
+    </Head>
       <Main>
       <h1> Galerie </h1>
       

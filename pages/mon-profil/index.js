@@ -14,7 +14,7 @@ export default function MonProfil() {
   return (
     <>
       <Head> 
-        <title>Mon Profil</title>
+        <title>Mon Profil | Marvin Mensah</title>
       </Head>
 
     <Main>

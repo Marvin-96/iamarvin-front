@@ -9,7 +9,7 @@ import Jobdetail from '@/components/jobdetail'
 import jobsDetails from '@/libs/jobsDetails'
 import { getAllPortfolioPost } from '@/libs/posts'
 import Section from '@/components/section'
-
+import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,6 +26,9 @@ export async function getStaticProps() {
 export default function Home({allPortfolioPost}) {
   return (
     <>
+    <Head>
+        <title>Accueil | Marvin Mensah</title>
+    </Head>
       <Frontsection />
         <Main>
         <section className='content'>   
