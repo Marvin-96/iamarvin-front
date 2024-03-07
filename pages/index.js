@@ -47,14 +47,17 @@ export default function Home({allPortfolioPost}) {
         
         <div className='griddiv'>
               {/* {console.log(allPortfolioPost)} */}
-              { allPortfolioPost.nodes.map((post , index ) =>  ( 
+              { allPortfolioPost.nodes.map((post , index ) =>  {
+                
+               if(index < 3 ){ return( 
               <ProjectPreview key={post.id}
                               title={post.title} 
                               post={post}
                               index={index}
                               slug={post.slug}
               />
-              ))}
+              );
+              }})}
         </div>
         </section>   
 
@@ -77,7 +80,7 @@ export default function Home({allPortfolioPost}) {
       })}
       
           <div className='jobbutton' data-aos="fade-up" data-aos-duration={2}>
-            <a className='CVlink' href='phttps://iamarvin.com/iamarvin_front/media/CV-Marvin-mensah2024_compressed.pdf'> Voir mon Curriculum vitae</a>
+            <a className='CVlink' href='https://iamarvin.com/iamarvin_front/media/CV-Marvin-mensah2024_compressed.pdf'> Voir mon Curriculum vitae</a>
           </div>
      
           </div>

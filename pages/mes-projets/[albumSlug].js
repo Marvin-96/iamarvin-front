@@ -67,35 +67,27 @@ export default function Post( {postData ,featuredImageUrl } ){
     </Head>
 
     <Main>
-            <div className={wrapContent}>
-                  <div className={wrapContentCentered}>
-                    <div>
-                          <div className={postdataContent}>
-                                <div>
-                                {/* <Link href="/galerie"> <li id="galerie"> Galerie</li> </Link> */}
-                               
-                                {/* <h4> Dernière modification par Marvin le <Date dateString={postData.modified} /> </h4> */}
-                                <h1 data-aos="fade-down" data-aos-duration="1500"> { postData.title } </h1>
-                                
-                                {postData.tags.nodes.map(tag => (
-                                <h2> {tag.name} </h2>
-                                ))}
-                                      <div data-aos="fade-up" data-aos-duration="1500" className={frontImage}>
-                                      { featuredImageUrl &&  
-
-                                      <Image  src={featuredImageUrl} 
-                                              alt={featuredImageUrl} 
-                                              width={600} 
-                                              height={400}  
-                                      /> } 
-                                      </div>
-                                </div>
-                          </div>
-
-                           <div className={renderStyle} dangerouslySetInnerHTML={ {__html: postData.content} }></div>
+    <div className={wrapContent}>
+    <div className={wrapContentCentered}>
+      <div>
+      <div className={postdataContent}>
+            <div>
+            {/* <Link href="../"> <p> Retour </p> </Link> */}
+            {/* <h4> Dernière modification par Marvin le <Date dateString={postData.modified} /> </h4> */}
+            <h1 data-aos="fade-down" data-aos-duration="1500"> { postData.title } </h1>
+            {postData.tags.nodes.map(tag => (
+             <h2> {tag.name} </h2>
+            ))}
+                  <div data-aos="fade-up" data-aos-duration="1500" className={frontImage}>
+                  { featuredImageUrl &&  <Image  src={featuredImageUrl} alt="ds" width={600} height={400}  /> } 
                   </div>
             </div>
-          </div>
+      </div>
+
+        <div className={renderStyle} dangerouslySetInnerHTML={ {__html: postData.content} }></div>
+    </div>
+    </div>
+    </div>
     </Main>
 
     </>

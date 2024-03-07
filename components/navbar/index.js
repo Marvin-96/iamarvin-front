@@ -20,7 +20,8 @@ const navbar = () =>  {
                         <ul className={upLinkBtn} id="upLinkBtn">
                             <Link href="/"><li id="homeLi"> Home</li> </Link>
                             {/* <Link href="/portfolio"> <li id="portfolioLi"> Portfolio</li> </Link><a href /> */}
-                            <Link href="/galerie"> <li id="galerie"> Galerie</li> </Link><a href />
+                            <Link href="/galerie"> <li id="galerie"> Galerie</li> </Link>
+                            <Link href="/mes-projets">  <li id="contactLi"> Mes projet</li> </Link>
                             <Link href="/mon-profil">  <li id="contactLi"> Mon Profil </li> </Link>
                             <Link href="/blog">  <li id="contactLi"> Mon blog</li> </Link>
                         
