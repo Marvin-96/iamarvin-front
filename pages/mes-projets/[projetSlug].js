@@ -8,7 +8,7 @@ import Link from "next/image"
 import HeroSection from "@/components/hero-section";
 
 export async function getStaticProps({params}){ 
-  const postData = await getSinglePost(params.albumSlug);
+  const postData = await getSinglePost(params.projetSlug);
   console.log(postData);
   
   let featuredImageUrl = "http://localhost:8888/iamarvin-back/wp-content/uploads/2024/01/default-thumb.png";
@@ -43,13 +43,13 @@ export async function getStaticProps({params}){
 }
 
 export async function getStaticPaths(){ 
-  const albumSlugs = await getPostSlugs();
+  const projetSlugs = await getPostSlugs();
 
   return {
-    paths: albumSlugs.map((s) => (
+    paths: projetSlugs.map((s) => (
       {
         params: {
-          albumSlug: s.slug
+          projetSlug: s.slug
       }
        }
     )), 
