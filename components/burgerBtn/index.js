@@ -10,18 +10,16 @@ const [state, setState] = useState('close');
 
 
 function openBurger()  {
-const links = document.querySelector("#rightMenu");
-const upLink = document.querySelector("#upLinkBtn");
-const allUpLink = document.querySelectorAll("#upLinkBtn li");
+    const links = document.querySelector("#rightMenu");
+    const upLink = document.querySelector("#upLinkBtn");
+    const allUpLink = document.querySelectorAll("#upLinkBtn li");
 
-setState(state === 'open' ? 'close' : 'open')
-upLink.classList.toggle('show-links');
+    setState(state === 'open' ? 'close' : 'open')
+    upLink.classList.toggle('show-links');
 
-allUpLink.forEach((link) => {
-    link.classList.toggle('link-animation');
-  });
-
-
+    allUpLink.forEach((link) => {
+        link.classList.toggle('link-animation');
+    });
 }
 
     return(

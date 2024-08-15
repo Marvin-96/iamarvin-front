@@ -10,6 +10,7 @@ import { getAllPosts } from '@/libs/posts'
 import Date from '@/components/date'
 import MainArticlePreview from '@/components/main-article-preview'
 import Head from 'next/head'
+import HeroSection from '@/components/hero-section'
 
 export async function getStaticProps() {
   const allPosts = await getAllPosts();
@@ -23,6 +24,8 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ allPosts }) {
+  const backgroundImage = "https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2024/04/alvaro-reyes-qWwpHwip31M-unsplash-min-scaled.jpg";
+  
 
   return (
     <>
@@ -30,8 +33,9 @@ export default function Blog({ allPosts }) {
         <title> Blog | Marvin Mensah</title>
       </Head>
 
+      <HeroSection PageName="Le Blog" BgImage={backgroundImage} />
       <Main>
-      <h1> Le blog </h1>
+      
       <p> Bienvenue sur mon blog ! 🤓 Ici on parle de Design, de tech et bien autres !!</p>
 
 

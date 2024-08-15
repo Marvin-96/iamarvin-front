@@ -23,18 +23,18 @@ const footerLink = [
       type: "lien"
     },
     {
-      slug: "X",
-      link: "/mention-legales",
+      slug: "X (twitter)",
+      link: "https://twitter.com/marvin_msh",
       type: "social"
     },
     {
       slug: "linkedin",
-      link: "/mention-legales",
+      link: "https://www.linkedin.com/in/marvin-mensah-75b774160/",
       type: "social"
     },
     {
       slug: "Dribble",
-      link: "/mentions-legales",
+      link: "https://dribbble.com/Marvin-96",
       type: "social"
     },
 ];

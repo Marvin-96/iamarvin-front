@@ -1,11 +1,16 @@
 
 .footer {
-  background-color: var( --pimaryColor);
-  margin-top: 30vh;
-  color: var(--bgColor);
+  background-color: var(--secondaryColor);
+  margin-top: 10vh;
+  color: var(--textColor);
   width: 100vw;
   display: flex;
   justify-content: center;
+  height: auto;
+
+  p, a , h3 {
+    color: var(--bgColor);
+  }
 
   .wrapped {
     width: 95vw;
@@ -16,8 +21,9 @@
   }
 
   .socialSection {
-    border-top: solid 1px;
+    border-top: solid 3px;
     border-color: var(--bgColor);
+
     padding: 2vh 0 ;
     display: flex;
     justify-content: space-between;
@@ -33,7 +39,7 @@
       border-radius: 30px;
       padding: 10px 30px;
       text-decoration: none;
-      color: #fff;
+    
       }
       
     }
@@ -57,20 +63,47 @@
 
         
 
-        div {
+        .contactSection {
+
+          p {
+            font-weight: 500;
+            font-size: 40px;
+          }
+
+          color: var(--bgColor);
+          a {
           font-size:  16px;
+        
+          text-decoration:underline;
+          }
+          
         }
       }
+
     .linksection {
-              
               display: flex;
-                      a {
-                        color: var(--bgColor);
-                        text-decoration: none;
+              flex-direction: row-reverse;
+              height: 100%;
+              width: 40vw;
+              color: var(--bgColor);
+              justify-content: space-between;
+
+                      .links {
+                        display: flex;
+
+                        a {
+                          padding-right:  15px;
+                        }
+
                       }
-                      
+
+                      a {                    
+                        text-decoration: none;
+                        color: var(--bgColor);
+                      }
+                 
                       li {
-                        padding: 10px 0;
+                        padding: 6px 0;
                         
                         list-style: none;
                         
@@ -80,16 +113,16 @@
 
 
           }
-          .emailSection {
+          // .emailSection {
 
-            display: flex;
+          //   display: flex;
        
-            background-color: none;
+          //   background-color: none;
         
-            // padding: 0 20vh;
+          //   // padding: 0 20vh;
             
 
-          }
+          // }
 
     }
 }
@@ -97,10 +130,18 @@
 
 @media (max-width: 768px) {
     .footer {
-      display: block;
+      display: flex;
+      // padding: 20px;
+      // display: block;
+
+      div , ul{
+        margin-bottom: 30px;
+      }
+
       .footerSection {
         display: block !important;
-        width: 100%;
+        width: 100% !important ;
+        height: auto;
         
 
         .logoSection {
@@ -111,7 +152,8 @@
 
 
       .wrapped {
-        width: auto;
+        width: 90vw;
+        justify-content: center;
       }
       // .linksection {
       //   padding: 30px;
@@ -119,16 +161,18 @@
     
       }
           .linksection {
-            
-          li {
-            width: 100vw;
-          }
+           
+           display: block !important;
+           width: 100% !important;
+           
+        
         }
 
       }
-      .linksection {
-              
-        display: block;
-      }
+
+      .socialSection{
+        width: auto;
+        
+      } 
 
 }

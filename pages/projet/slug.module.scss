@@ -37,6 +37,10 @@ img {
         word-break: break-all;
     }
 
+   ul {
+        margin: 30px;
+    }
+
     
     display: flex;
     justify-content: center;
@@ -44,7 +48,7 @@ img {
     // background-color: red;
 
     p {
-        margin: 30px;
+        margin: 10px;
         font-weight: 300;
     }
     strong {

@@ -1,10 +1,11 @@
 .navbarClass {
+    // background-color: var(--secondaryColor) !important;
     background-color: var(--bgColor) !important;
     display: flex;
     position: fixed;
     width: 100vw;
     // height: 40px;
-    padding: 12px 0px;
+    padding: 8px var(--screenMargin);
     justify-content: center;
     z-index: 10;
     
@@ -15,12 +16,11 @@
   .navbarcontent {
     justify-content: space-between;
     display: flex;
-    width: 96vw;
+    width: 98vw;
 }
 
   .menu   {
       padding-top: 2vw;
-      background-color: green;
       display: flex;
       justify-content: space-around;
       height: 30px;
@@ -34,7 +34,7 @@
       display: flex;
       /* width: 15%; */
       a {
-        font-weight: 200 !important;
+        font-weight: 400 !important;
         text-decoration: none;
       }
     }
@@ -42,27 +42,26 @@
   
     
     
-    
+
     
     
     .upLinkBtn {
         display: flex;
         margin: auto;
+
+        li {
+          list-style: none;
+        }
     
-    li {
-      color: var(--textColor);
+    .linksSection {
+      color: var(--secondaryColor);
       text-decoration: none;
-      margin-right: 40px ;
-      /* font-family: Quicksand ; */
-      font-family: var(--text);
-      list-style: none;
-      
-      // display: none;
-      
+      margin-left: 30px;
+      font-weight: 300;
      }
     
-     li:hover {
-        color: var(--secondaryColor);
+     .linksSection:hover {
+        color: var(--pimaryColor);
        }
     
     }
@@ -73,27 +72,7 @@
     
     
  
-    .logo {
-      // width: 140px;
-      cursor: pointer;
-      text-decoration: none;
-      outline: none;
-      // text-transform: uppercase;
-      border: 0;
-      background: none;
-      z-index: 22;
-      font-family: var(--text);
-      font-size: 22px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
-      color:   var(--textColor);
-      text-align: center;
-      margin: auto 0;
 
-
-      
-    }
   
 
   
@@ -106,16 +85,30 @@
       height: 100vh;
       width: 100vw;
       position: fixed;
+      background-color: var(--pimaryColor);
       top: 0;
       left: 0;
       z-index: 20;
-  
+
+      .linksSection {
+        font-weight: 500;
+        color: var(--bgColor)
+      }
+    
+      // padding: 0px 5vw;
     }
   
     .menu   {
       padding-top: 3vw;
       
     }
+
+    .linksSection {
+      margin-left: 0px;
+      font-size: 15vw;
+      margin: 30px 0;
+      
+     }
 
       .logo {
         margin-left: 30px;

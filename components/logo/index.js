@@ -1,0 +1,18 @@
+import React from "react"
+import { Fragment, useState, useEffect } from "react";
+import Link from 'next/link'
+import { logo } from './logo.module.scss'
+
+
+const Logo = () =>  {
+
+
+
+  return (
+
+          <>
+                    <Link href="/" className={logo}> Marvin Mensah</Link>
+          </>
+)}
+
+export default Logo

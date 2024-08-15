@@ -34,7 +34,7 @@
   }
 
   .albumPresentation {
-    padding: 30px 0;
+    padding: 0 0 30px  0;
   }
 
 .wrapContent {
@@ -45,11 +45,11 @@ justify-content: center;
   .frontImage {
     text-align: center;
     img {
-      width: 40%;
+      // width: 40%;
       height: auto;
       object-fit: cover;
       object-position: 25% 25%; 
-      border-radius: 30px;
+      border-radius: var(--imgRadius);
     }
   }
   h1 {
@@ -63,7 +63,7 @@ justify-content: center;
 
 
   img {
-    border-radius: 30px;
+    border-radius: var(--imgRadius);
     width: 40%;
     height: auto;
     margin: 30px 0;
@@ -76,12 +76,44 @@ justify-content: center;
       grid-template-columns: repeat(2, 1fr);
     }
 
+    .h1 {
+      margin: 90px 0;
+    }
+
     .frontImage {
+      margin: 70px 0;
       img {
-        width: 100%;
+        border-radius: 10px;
+        width: 90vw !important;
       }
     }
+
+    .renderStyle {
+      text-align: center;
+    
+    
+      img {
+        border-radius: var(--imgRadius);
+        width: 100%;
+        height: auto;
+        margin: 30px 0;
+      }
+    }
+
+      .frontImage {
+    text-align: center;
+    img {
+      width: 40%;
+      height: auto;
+      object-fit: cover;
+      object-position: 25% 25%; 
+      border-radius: var(--imgRadius);
+    }
   }
+
+}
+    
+  
   
   @media  (max-width: 500px) {
       .PostGrid {
@@ -96,7 +128,7 @@ justify-content: center;
 
         img {
 
-          width: 100%;
+          width: 100% !important;
           height: auto;
         }
       }

@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
-import { frontImage, renderStyle , wrapContent, postdataContent, wrapContentCentered} from './galerie.module.scss'
+import { frontImage, renderStyle , wrapContent, postdataContent, wrapContentCentered} from './mes-projets.module.scss'
 import Main from '@/components/main'
 import { getPostSlugs, getSinglePost } from "@/libs/posts";
 import Date from "@/components/date";
 import Link from "next/image"
-
+import HeroSection from "@/components/hero-section";
 
 export async function getStaticProps({params}){ 
   const postData = await getSinglePost(params.albumSlug);
@@ -67,9 +67,10 @@ export default function Post( {postData ,featuredImageUrl } ){
     </Head>
 
     <Main>
+      
     <div className={wrapContent}>
     <div className={wrapContentCentered}>
-      <div>
+      <div> 
       <div className={postdataContent}>
             <div>
             {/* <Link href="../"> <p> Retour </p> </Link> */}
@@ -79,8 +80,10 @@ export default function Post( {postData ,featuredImageUrl } ){
              <h2> {tag.name} </h2>
             ))}
                   <div data-aos="fade-up" data-aos-duration="1500" className={frontImage}>
-                  { featuredImageUrl &&  <Image  src={featuredImageUrl} alt="ds" width={600} height={400}  /> } 
+                  {/* { featuredImageUrl &&  <Image  src={featuredImageUrl} alt="ds" width={600} height={400}  /> }  */}
+                 
                   </div>
+
             </div>
       </div>
 

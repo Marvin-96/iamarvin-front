@@ -8,7 +8,8 @@ import FeatureImage from '@/components/feature-image'
 import { getAllPortfolioPost } from '@/libs/posts'
 import {PostGrid , AlbumPreview , albumPresentation } from './mes-projets.module.scss'
 import Head from 'next/head'
-
+import HeroSection from '@/components/hero-section'
+import ProjectPreview from '@/components/project-preview'
 
 export async function getStaticProps() {
   const allPortfolioPost = await getAllPortfolioPost();
@@ -21,7 +22,7 @@ return {
 }
 
 export default function mesProjets({ allPortfolioPost }) {
-
+  const backgroundImage = "https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2024/04/alvaro-reyes-qWwpHwip31M-unsplash-min-scaled.jpg";
   return (
     <>
       {console.log(allPortfolioPost)}
@@ -29,8 +30,13 @@ export default function mesProjets({ allPortfolioPost }) {
       <Head>
         <title>Mes projets | Marvin Mensah</title>
     </Head>
+      <HeroSection PageName="Mes projets" 
+                   BgImage={backgroundImage} 
+ 
+                   />
+      
       <Main>
-      <h1> Mes projets </h1>
+    
       
 
 
@@ -38,30 +44,19 @@ export default function mesProjets({ allPortfolioPost }) {
                   
 
         <div className={albumPresentation}> 
-          <h2> Mes derniers Albums </h2> 
-          <p> Voici une selection de mes photos. Je prends mes photos avec un Fudjifilm X S-10 avec un objectif 15-45mm. <br /> J'utilise également un Iphone 15 Pro Max. </p>
+          <h2> Mes derniers Projets </h2> 
+          {/* <p> Voici une selection de mes photos. Je prends mes photos avec un Fudjifilm X S-10 avec un objectif 15-45mm. <br /> J'utilise également un Iphone 15 Pro Max. </p> */}
         
         </div>
-        <div className={PostGrid}>
+        <div className="PostGrid">
         { allPortfolioPost.nodes.map((post , index) =>  (  
 
-        <>
-
-          <div className={AlbumPreview} key={post.id}>
-          <Link href={`/galerie/${post.slug}`}> 
-             <FeatureImage data-aos="fade-up" data-aos-duration='1' post={post}/>
-          </Link>
-          <Link href={` /galerie/${post.slug}`}> 
-           {post.title} 
-          </Link>
-            
-
-
-
-          </div>
-        </>
-
-
+               <ProjectPreview key={post.id}
+                              title={post.title} 
+                              post={post}
+                              index={index}
+                              slug={post.slug}
+              />
           )  
         )}  </div> 
 

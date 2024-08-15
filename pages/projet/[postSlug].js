@@ -4,7 +4,8 @@ import { frontImage, renderStyle , wrapContent, postdataContent, wrapContentCent
 import Main from '@/components/main'
 import { getPostSlugs, getSinglePost } from "@/libs/posts";
 // import Date from "@/components/date";
-
+import HeroSection from "@/components/hero-section";
+import Projetfrontimage from "@/components/projet-frontimage";
 
 export async function getStaticProps({params}){ 
 
@@ -56,20 +57,22 @@ export default function Post( {postData ,featuredImageUrl } ){
     <Head>
     <title key={postData.slug}> {postData.title} </title>
     </Head>
+    
+    { featuredImageUrl &&  <Projetfrontimage PageName="dsds" BgImage={featuredImageUrl}/> } 
     <Main>
     <div className={wrapContent}>
+ 
     <div className={wrapContentCentered}>
       <div>
       <div className={postdataContent}>
             <div>
+        
             {/* <h4> Dernière modification par Marvin le <Date dateString={postData.modified} /> </h4> */}
             <h1> { postData.title } </h1>
             {postData.tags.nodes.map(tag => (
              <h2 key={tag.id}> {tag.name} </h2>
             ))}
-            <div className={frontImage}>
-            { featuredImageUrl &&  <Image  src={featuredImageUrl} alt="ds" fill  /> } 
-            </div>
+       
         </div>
       </div>
 

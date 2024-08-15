@@ -1,7 +1,7 @@
 import React from "react"
 import { Fragment, useState, useEffect } from "react";
 import Link from 'next/link'
-import { emailSection, linksection, footer, copyright, footerSection , logoSection, socialSection , links, wrapped} from './footer.module.scss'
+import { emailSection, linksection, footer, copyright, footerSection , menuSection, logoSection, socialSection , links, wrapped , contactSection} from './footer.module.scss'
 import footerLink from "@/libs/footerLink"
 import Image from "next/image"
 import xIcon from "@/public/x-icon.svg"
@@ -21,10 +21,22 @@ const Footer = () =>  {
             <div className={wrapped}>
             <div className={footerSection}>
 
+            {/* <div  className={emailSection} >
+                    
+                  </div> */}
+                  
+                  <div  className={logoSection}>
+                    <div className={contactSection}>
+                    
+                    <span> <p>Contactez-moi ! </p></span>
+                    <a href="mailto:marvinmensah95@gmail.com"> marvinmensah95@gmail.com</a>
+                    </div>
+                  </div>
+
 
             <div className={linksection}>
                     
-                    <ul>
+                    <ul className={menuSection}>
                     <h3> Menu </h3>  
                     {footerLink.map(link => {
                           if (link.type === "lien") {
@@ -37,18 +49,30 @@ const Footer = () =>  {
                           return null; // ou tout autre chose que vous voulez rendre
                         })}
                     </ul>
+                    
+                    <div>
+                    <ul>
+                    <h3>Social</h3>    
+                    <div className={links}>
+                     
+                              <a href='https://twitter.com/marvin_msh' target="_blank">
+                                  <li> <Image src={xIcon} width={20} height={20} /> </li>
+                              </a>
+                              <a href='https://www.linkedin.com/in/marvin-mensah-75b774160/' target="_blank">
+                                  <li> <Image src={linkedinIcon} width={20} height={20} /> </li>
+                              </a>
+                              <a href='https://dribbble.com/Marvin-96' target="_blank">
+                                  <li> <Image src={dribbbleIcon} color="#fff" width={20} height={20} /> </li>
+                              </a>
+                            
+                    </div>
+                    </ul>
+                    </div>
+
+
                   </div>
 
-                  <div  className={emailSection} >
-                    <a> marvinmensah95@gmail.com</a>
-                  </div>
-                  
-                  <div  className={logoSection}>
-                    <div>
-                    <p>Marvin Mensah</p>
-                    
-                    </div>
-                  </div>
+     
                 
             
             
@@ -58,18 +82,8 @@ const Footer = () =>  {
             <div className={socialSection}>
               <div><p className={copyright}>{`© ${year}. Tous droits réservés`}</p></div>
 
-              <div className={links}>
-                              <a href='https://twitter.com/marvin_msh'>
-                                  <li> <Image src={xIcon} width={20} height={20} /> </li>
-                              </a>
-                              <a href='https://www.linkedin.com/in/marvin-mensah-75b774160/'>
-                                  <li> <Image src={linkedinIcon} width={20} height={20} /> </li>
-                              </a>
-                              <a href='https://dribbble.com/Marvin-96'>
-                                  <li> <Image src={dribbbleIcon} color="#fff" width={20} height={20} /> </li>
-                              </a>
-                            
-              </div>
+              
+
               
             </div> 
             </div>

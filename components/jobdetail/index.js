@@ -14,7 +14,7 @@ const jobdetail = (props) =>  {
         <div className={title}>
           <h3>{props.name}</h3>
           <div className={date}>
-            ({props.date})
+           <p> ({props.date})</p>
           </div>
           </div>
           <p>{props.role}</p>

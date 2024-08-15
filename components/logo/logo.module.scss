@@ -1,0 +1,22 @@
+.logo {
+  // width: 140px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  // text-transform: uppercase;
+  border: 0;
+  background: none;
+  z-index: 22;
+  font-size: 20px;
+
+  line-height: normal;
+  color:   var(--textColor);
+  text-align: center;
+  margin: auto 0;
+  font-family: var(--title);
+  font-weight: 400;
+  text-transform: uppercase;
+
+
+  
+}

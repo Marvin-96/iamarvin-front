@@ -14,14 +14,7 @@
   --tagColor: rgb(255, 255, 255);
   --strongColor: var(--pimaryColor);
   --greyLinks: rgb(174, 174, 174);
-  
 
-  --title: 'Unbounded', sans-serif;
-  // --title: 'Robine Demo', sans-serif;
-  
-  // --title: "nimbus-sans-extended",sans-serif;
-  // --text: 'IBM Plex Sans KR', sans-serif;
-  --text:  'Work Sans', sans-serif;
   --pSize: 128px;
   --textSize: 20px;
   --pArticleSize: 27px;
@@ -38,7 +31,9 @@
   --thumbHeight: 17vw;
   --thumbWidth: 31vw ; 
   --gridPadding: 120px; 
-  --imgRadius: 20px;
+  --imgRadius: 12px;
+
+  --screenMargin: 30px;
   
 
   @media  (max-width: 1024px) { 
@@ -54,6 +49,10 @@
     --gridPadding: none; 
 
   }
+  @media  (max-width: 700px) { 
+    --screenMargin: 15px;
+
+  }
 
 
 
@@ -63,34 +62,40 @@
   h1 {
     
     font-family: var(--title);
-    font-weight: 300;
-  }
-
-  h1 {
-    font-size: 10vw;
+    font-weight: 400;
+    font-size: 8vw;
+    color: var(--textColor);
     // text-transform: uppercase;
   }
 
   h2 {
     font-size: var(--textSize);
-    font-weight: 300;
+    font-family: var(--text);
+    // font-family: var(--title);
+    font-size: var(--titleSize);
+    // font-size: 96px;
+    font-weight: 500;
+    color: var(--textColor);
   }
 
-  h3 {
+  h3, h4 ,li {
     font-size: 18px;
     font-family: var(--text);
     font-weight: 500;
+    color: var(--textColor);
   }
 
   a {
     font-family: var(--text);
     font-weight: 300;
+    color: var(--textColor);
   }
 
-  p {
+  p  {
     font-family: var(--text);
     font-size: var(--textSize);
     font-weight: 300;
+    color: var(--textColor)
   }
 }
 
@@ -111,19 +116,50 @@
 
 .ProjectSectionTitle {
   padding: 10vh 0;
+
+  e {
+    display: none;
+  }
+
+  c {
+    display: block;
+  }
 }
 
 
 .content {
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   height: 70vh;
   // padding: 20% 0;
   // background-color: red;
-   p {
-    margin-left: 10vw;
+   h4 {
+    font-weight: 500;
+    font-size: 40px;
    }
+
+   li {
+    text-decoration: underline;
+    list-style: none;
+   }
+
+   .pdp img { 
+    width: auto;
+    height: 100%;
+    border-radius: 10px;
+   }
+
+   .presentationtxt {
+    // background-color: red;
+    height: 80%;
+    width: 90%;    
+    p {
+      font-weight: 500;
+      font-size: 40px;
+    }
+   } 
+
    .working-illustration {
       margin-left: 50px;
       background-color: var(--pimaryColor);
@@ -247,17 +283,32 @@
 
 }
 
+.Social {
+
+  a {
+    color: var(--textColor);
+    font-weight: 500;
+  }
+  a:hover {
+    color: var(--pimaryColor);
+  }
+}
+
 .CVlink {
-  border: 2px var(--textColor) solid;
-  color: var(--textColor);
+  border: 2px solid;
+  background: var(--secondaryColor);
+  color: var(--bgColor);
   padding: 10px;
   border-radius: 30px;
   text-decoration: none;
 
-  :hover {
-    background-color: var(--pimaryColor);
-    color: var(--bgColor);
-  }
+
+}
+
+.CVlink:hover {
+  background-color: var(--pimaryColor);
+  transition: 0.4s;
+  color: var(--bgColor);
 }
 
 
@@ -280,10 +331,15 @@
 @media  (max-width: 1000px) {
   .griddiv {
     grid-template-columns: repeat(1, 1fr);
-   
+  }
 
+  h1 {
+    font-size: 18vw;
   }
 }
+
+
+
 
 .Section-title {
   padding: 90px 0 30px;
@@ -326,7 +382,7 @@
 
   .content {
     display: block;
-    height: 60vh;
+    height: auto;
     padding: 0 auto;
     margin: 100px 0;
     
@@ -346,7 +402,31 @@
         width: 39vw;
         height: auto;
       }}
+
+    
+  .pdp img {
+    width: 100%;
+    margin:  30px 0;
+  }
+
+  h4 {
+    margin: 10vw 0 5vw 0; 
+  }
      
   }
+
 }
 
+
+@media  (max-width: 473px) { 
+  .ProjectSectionTitle {
+
+  
+    e {
+      display: block;
+    }
+    c {
+      display: none;
+    }
+  }
+}

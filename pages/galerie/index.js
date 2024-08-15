@@ -8,6 +8,8 @@ import FeatureImage from '@/components/feature-image'
 import { getAllGaleriePosts } from '@/libs/posts'
 import {PostGrid , AlbumPreview , albumPresentation } from './galerie.module.scss'
 import Head from 'next/head'
+import BackButton from '@/components/back-button'
+import HeroSection from '@/components/hero-section'
 
 
 export async function getStaticProps() {
@@ -23,6 +25,8 @@ export async function getStaticProps() {
 
 export default function Galerie({ allGaleriePosts }) {
 
+  const backgroundImage = "https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2024/04/hector-martinez-EG49vTtKdvI-unsplash-min-scaled.jpg";
+
   return (
     <>
       {console.log(allGaleriePosts)}
@@ -30,9 +34,27 @@ export default function Galerie({ allGaleriePosts }) {
       <Head>
         <title>Galerie | Marvin Mensah</title>
     </Head>
+
+    <HeroSection PageName='Ma Galerie' BgImage={backgroundImage}></HeroSection>
+
+    {/* <div  data-aos="fade-down" 
+    data-aos-duration="100" 
+    className='heroSection'
+    style={{ backgroundImage:'linear-gradient(to bottom, rgba(0,0,0,1), rgba(255,255,255,0)), url(https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2024/04/hector-martinez-EG49vTtKdvI-unsplash-min-scaled.jpg)'}} 
+    >
+
+      <div className='heroContent'>
+          <div className='heroNav'>
+          <BackButton></BackButton>
+          </div>
+          <hr></hr>
+          <h1> Galerie </h1>
+          </div>
+      </div> */}
+
       <Main>
-      <h1> Galerie </h1>
       
+     
 
 
       <div>

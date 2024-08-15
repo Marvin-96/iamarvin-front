@@ -6,6 +6,7 @@ import Date from "@/components/date";
 import Link from "next/image"
 import Jobdetail from '@/components/jobdetail'
 import jobsDetails from '@/libs/jobsDetails'
+import HeroSection from "@/components/hero-section";
 
 
 export default function MonProfil() {
@@ -17,8 +18,9 @@ export default function MonProfil() {
         <title>Mon Profil | Marvin Mensah</title>
       </Head>
 
+    <HeroSection PageName='Mon Profil'></HeroSection>
     <Main>
-     <h1> Mon Profil</h1>
+    
     <div className={section}>
     <div className={jobPresetation}>
       <h2>Mes experiences professionnels</h2>

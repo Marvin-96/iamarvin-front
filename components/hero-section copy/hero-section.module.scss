@@ -1,0 +1,23 @@
+.heroSection {
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  // height: 30vh;
+  padding: 10vh 20px 0px 20px;
+  display: flex;
+  color: var(--bgColor);
+
+  .heroNav {
+    padding: 30px 0;
+  }
+  
+  .heroContent {
+
+    width: 100%;
+  hr {
+    background-color: var(--bgColor);
+    height: 3px;
+    margin-bottom: 30px;
+  }
+}
+}

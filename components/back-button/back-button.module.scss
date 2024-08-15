@@ -1,0 +1,26 @@
+.goBack {
+  border: 2px;
+  background: var(--secondaryColor);
+  color: var(--bgColor);
+  padding: 10px 20px; 
+  border-radius: 30px;
+  text-decoration: none;
+  
+}
+
+.goBack:hover {
+  background-color: var(--pimaryColor);
+  transition: 0.4s;
+  color: var(--bgColor);
+}
+
+.arrowleft {
+  border: solid var(--bgColor);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  text-decoration: none;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  
+}

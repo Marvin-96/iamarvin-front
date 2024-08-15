@@ -58,7 +58,7 @@ export async function getStaticPaths(){
   }
 }
 
-export default function Post( {postData ,featuredImageUrl } ){ 
+export default function Galerie( {postData ,featuredImageUrl } ){ 
   return(
     <>
     {/* {  console.log(postData)} */}
@@ -69,9 +69,9 @@ export default function Post( {postData ,featuredImageUrl } ){
     <Main>
             <div className={wrapContent}>
                   <div className={wrapContentCentered}>
-                    <div>
+                  
                           <div className={postdataContent}>
-                                <div>
+                        
                                 {/* <Link href="/galerie"> <li id="galerie"> Galerie</li> </Link> */}
                                
                                 {/* <h4> Dernière modification par Marvin le <Date dateString={postData.modified} /> </h4> */}
@@ -88,12 +88,12 @@ export default function Post( {postData ,featuredImageUrl } ){
                                               width={600} 
                                               height={400}  
                                       /> } 
-                                      </div>
+                                  
                                 </div>
                           </div>
 
                            <div className={renderStyle} dangerouslySetInnerHTML={ {__html: postData.content} }></div>
-                  </div>
+               
             </div>
           </div>
     </Main>
