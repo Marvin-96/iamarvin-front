@@ -40,7 +40,7 @@ export default function Home({allPortfolioPost}) {
           <p data-aos="fade-up"> J'aime imaginer, créer et prototyper. Me lancer dans des projets voir leurs evolutions.</p>  
           </div>
           <div className='Social' data-aos="fade-up"> 
-            <h4>Social</h4>
+            <h4>Mes reseaux</h4>
           <ul>
           {footerLink.map(link => {
                           if (link.type === "social") {

@@ -60,7 +60,7 @@ export async function getAllPortfolioPost()  {
   const query = { 
       
       query: `query getPortfolioPost  {
-        posts(where: {orderby: {field: DATE, order: ASC}, categoryName: "portfolio"}) {
+        posts(where: {orderby: {field: DATE, order: DESC}, categoryName: "portfolio"}) {
           nodes {
             title
             date

@@ -8,6 +8,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: 
+  linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 1)), /* Opacité simulée avec un dégradé */
+  url(https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2024/08/aesthetic-minimal-white-grid-pattern-wallpaper-scaled.jpg) 
+  center center/contain repeat,
+  linear-gradient(0deg, rgba(255, 255, 255, 1) 6%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 1) 100%);
+
+
   .content {
     width: 90vw;
     // background-color: blue;
@@ -45,7 +52,7 @@ img {
   .frontsection {
 
   h1 {
-    font-size: 4vw;
+    font-size: 12vw;
     margin: 0vw;
   }
   

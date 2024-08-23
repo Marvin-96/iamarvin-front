@@ -12,7 +12,7 @@ const Frontsection = () =>  {
      data-aos-duration="1">
         <p> Marvin Mensah</p>
       <h1> PRODUCT DESIGNER  </h1> 
-      <p> Récemment installé à Montréal, je suis ouvert à des opportunités en tant que designer UX. </p>
+      <p> Récemment installé à Montréal, je suis ouvert à des opportunités en tant que UX/UI Designer. </p>
       
       
       {/* <Image data-aos="zoom-in"

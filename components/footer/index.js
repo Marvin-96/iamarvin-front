@@ -52,7 +52,7 @@ const Footer = () =>  {
                     
                     <div>
                     <ul>
-                    <h3>Social</h3>    
+                    <h3>Mes Reseaux</h3>    
                     <div className={links}>
                      
                               <a href='https://twitter.com/marvin_msh' target="_blank">

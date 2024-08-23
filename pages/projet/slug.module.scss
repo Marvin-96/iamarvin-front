@@ -15,6 +15,7 @@ img {
 }
 
 
+
 .renderStyle {
     display: block !important;
     color:   var(--textColor);
@@ -23,18 +24,18 @@ img {
     height: auto;
     padding: 30px 0;
     align-items: center;
-    align-content: center;
-    
-    
+    align-content: center;    
 }
+
 }
 
 .wrapContent  {
 
     h1 {
-        margin:  50px 0;
-        font-size: 11vw;
+        margin:  20px 0;
+        font-size: 16px !important;
         word-break: break-all;
+        
     }
 
    ul {

@@ -28,12 +28,12 @@ const footerLink = [
       type: "social"
     },
     {
-      slug: "linkedin",
+      slug: "Linkedin",
       link: "https://www.linkedin.com/in/marvin-mensah-75b774160/",
       type: "social"
     },
     {
-      slug: "Dribble",
+      slug: "Dribbble",
       link: "https://dribbble.com/Marvin-96",
       type: "social"
     },
