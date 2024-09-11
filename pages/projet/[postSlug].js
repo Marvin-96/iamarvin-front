@@ -58,6 +58,65 @@ export default function Post( {postData ,featuredImageUrl } ){
     <title key={postData.slug}> {postData.title} </title>
     </Head>
     
+    <style>
+    {`
+
+
+.iv-container {
+ display: flex;
+ justify-content: center;
+ width: auto;
+ font-family: var(--text);
+}
+
+.iv-wrapped {
+ display: flex; 
+ width: 90vw;
+}
+
+.Typo {
+  width: 60%;
+}
+
+.Color-card {
+  width: 60px;
+  text-align: center;
+}
+
+.Color-Panel {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-circle {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  border-radius: 100%;
+  
+}
+
+.color-name {
+  margin: 10px 0 30px 0;
+}
+
+@media (max-width: 765px) {
+  
+  .iv-wrapped {
+  display: block;
+  }
+  
+  .Color-Panel {
+  display: block;
+  // margin: 0 auto;
+    margin-top: 30px;
+  }
+  
+}
+          `}
+    </style>
+
     { featuredImageUrl &&  <Projetfrontimage PageName="dsds" BgImage={featuredImageUrl}/> } 
     <Main>
     <div className={wrapContent}>

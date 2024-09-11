@@ -16,9 +16,9 @@
   --greyLinks: rgb(174, 174, 174);
 
   --pSize: 128px;
-  --textSize: 20px;
+  --textSize: 16px;
   --pArticleSize: 27px;
-  --titleSize: 40px;
+  --titleSize: 30px;
   --portfolioTitleSize: 90px;
   --detailSize: 15px;
 
@@ -325,6 +325,33 @@
 
 
 
+
+  .alignright {
+  display: flex;
+  justify-content: right;    
+  }
+
+  .aligncenter {
+    display: flex;
+    justify-content: center; 
+  }
+
+  // figure
+  // { img {
+  //   width: auto!important;
+  // }}
+
+  .description-p {
+    width: 30vw;
+  }
+
+  @media (max-width: 765px) {
+    .description-p {
+      width: auto;
+    }
+
+  }
+
 ///////////////////////
 
 
@@ -502,6 +529,8 @@
 }
 
 
+
+
 @media (max-width: 765px) {
 
   .wp-block-details {
@@ -543,3 +572,10 @@
   }
   
 }
+
+.Color-Panel {
+  div {
+    align-content: center;
+  }
+}
+
