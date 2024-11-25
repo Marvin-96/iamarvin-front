@@ -75,7 +75,7 @@ export default function Post( {postData ,featuredImageUrl } ){
 }
 
 .Typo {
-  width: 60%;
+  width: auto;
 }
 
 .Color-card {
@@ -108,9 +108,13 @@ export default function Post( {postData ,featuredImageUrl } ){
   }
   
   .Color-Panel {
-  display: block;
-  // margin: 0 auto;
-    margin-top: 30px;
+  // margin:  30px auto 0  auto;
+  margin: 30px 0
+    
+  }
+
+  .Color-Panel-Inner {
+  margin-right: 40px;
   }
   
 }

@@ -3,7 +3,7 @@
     // flex-flow: column wrap;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 2.6vw;
     // grid-auto-rows: minmax(100px, auto);
     justify-items: start;
     width: 65vw;
@@ -15,7 +15,7 @@
     }
 
     img {
-      width: 30vw;
+      width: 30.1vw;
       height: 50vw;
       object-fit: cover;
       object-position: 25% 25%; 

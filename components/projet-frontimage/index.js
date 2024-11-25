@@ -7,7 +7,7 @@ import BackButton from '../back-button';
 export default function Projetfrontimage({BgImage, PageName }) {
   return(
     <div  data-aos="fade-down" 
-    data-aos-duration="100" 
+    data-aos-duration="1000" 
     className={heroSection}
     style={{ backgroundImage:`url(${BgImage})`}} 
     >

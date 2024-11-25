@@ -32,7 +32,7 @@
   --thumbWidth: 31vw ; 
   --gridPadding: 120px; 
   --imgRadius: 12px;
-
+  --projectTextPadding: 0 10vw;
   --screenMargin: 30px;
   
 
@@ -51,7 +51,7 @@
   }
   @media  (max-width: 700px) { 
     --screenMargin: 15px;
-
+    --projectTextPadding: 0 30px;
   }
 
 
@@ -343,6 +343,7 @@
 
   .description-p {
     width: 30vw;
+    padding: 0 !important;
   }
 
   @media (max-width: 765px) {
@@ -468,11 +469,14 @@
   background-color: #fbfbfb;
   border-radius: 20px;
   padding: 5px 10px;
-  summary {
-    p {
-      width: 40vw;
 
-    }
+  p {
+    width: 40vw;
+    padding: 0 !important;
+
+  }
+
+  summary {
 
     margin: 15px 0;
     text-decoration: underline solid  2px ;
@@ -515,7 +519,7 @@
     display: flex;
 
   video {
-    width: 20%;
+    width: 100%;
   }
 }
 
@@ -564,12 +568,6 @@
    }
      
    }
-
-   .wp-block-video {
-    video {
-      width: 40%;
-    }
-  }
   
 }
 
