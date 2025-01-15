@@ -32,6 +32,7 @@ export default function Home({allPortfolioPost}) {
     <Head>
         <title>Accueil | Marvin Mensah</title>
     </Head>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Outfit:wght@100..900&family=Big+Shoulders+Text:wght@100..900&display=swap" rel="stylesheet"></link>
       <Frontsection />
         <Main>
         <section className='content'>   
