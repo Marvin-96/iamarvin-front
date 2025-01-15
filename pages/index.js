@@ -32,7 +32,7 @@ export default function Home({allPortfolioPost}) {
     <Head>
         <title>Accueil | Marvin Mensah</title>
     </Head>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Outfit:wght@100..900&family=Big+Shoulders+Text:wght@100..900&display=swap" rel="stylesheet"></link>
+    
       <Frontsection />
         <Main>
         <section className='content'>   
@@ -94,7 +94,7 @@ export default function Home({allPortfolioPost}) {
         </section>   
 
         <div className=''>
-        <h2 className="ProjectSectionTitle"> <c> Mes experiences professionnelles</c>   <e>Mes experien-ces profes-sionnelles</e>  </h2>
+        <h2 className="ProjectSectionTitle">  Mes experiences professionnelles   </h2>
           <div className='Jobwrapped'>
 
           {jobsDetails.map((job, index) => {
