@@ -1,69 +1,168 @@
+// General structure for .frontsection
 .frontsection {
-  // background-color: var(--pimaryColor);
   width: 100vw;
   height: 90vh;
-  padding: 80px 90px;
+  
+  padding: 80px var(--screenMargin);
   color: var(--textColor);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: 
-  linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 1)), /* Opacité simulée avec un dégradé */
-  url(https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2024/08/aesthetic-minimal-white-grid-pattern-wallpaper-scaled.jpg) 
-  center center/contain repeat,
-  linear-gradient(0deg, rgba(255, 255, 255, 1) 6%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 1) 100%);
+  // background: 
+  //   linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 1)),
+  //   url(https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2024/08/aesthetic-minimal-white-grid-pattern-wallpaper-scaled.jpg) 
+  //   center center/contain repeat,
+  //   linear-gradient(0deg, rgba(255, 255, 255, 1) 6%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 1) 100%);
 
-
+  // Content section styles
   .content {
-    width: 90vw;
-    // background-color: blue;
-    text-align: center;
-    justify-content: center;
-    p{
-      // width: 30vw;
-      
-      text-align: center;
-      padding: 0 10vw;
+    p {
+      font-family: var(--title);
+      font-size: 4vw;
+      font-weight: 900;
+      // padding: 0 0.8vw;
     }
   }
 
-
-
-h1 {
-  text-transform: uppercase;
-  font-size: 6vw;
-  text-align: center;
-  // margin: 0 10vw;
-  font-weight: 500;
-}
-
-img {
-  width: 25vw;
-  height: auto;
-  margin: 60px 0 0;
-  border-radius: var(--imgRadius);
-}
-
- }
-
-
- @media  (max-width: 900px) { 
-  .frontsection {
-
+  // Title styles
   h1 {
-    font-size: 12vw;
-    margin: 0vw;
+    text-transform: uppercase;
+    font-size: 13vw;
+    
+  }
+
+  .headtitleWrapped {
+    display: flex;
+    align-items: center;
+  }
+
+  // Video section styles
+  .videoSection {
+    overflow: hidden;
+    display: flex;
+    border: 2px solid;
+    justify-content: space-between;
+    background-color: var(--bgColor);
+    height: 34vh;
+    .textSection {
+      width: 50vw;
+      margin: 10px;
+
+      p {
+        font-size: 30px;
+        font-family: var(--text);
+        font-weight: 300;
+        margin-bottom: 30px;
+      }
+
+      .scrollingButton {
+        background-color:  var(--textColor);
+        font-family: var(--title);
+        text-transform: uppercase;
+        color: white;
+        padding: 17px 22px;
+        font-size: 20px;
+        
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+          background-color: var(--primaryColor);
+          transition: 0.5s;
+        }
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin: 0 2px 0 8px;
+        transform: translateY(2px);
+      }
+      }
+    }
+
+    video {
+      width: auto;
+      height: 100%;
+      border-left: 2px solid;
+    }
   }
   
+  // Hidden title video section
+  .titleVideo2 {
+    display: none;
+  }
+
+  // Image styles
   img {
-    width: 80vw;
+    width: 25vw;
     height: auto;
     margin: 60px 0 0;
     border-radius: var(--imgRadius);
   }
+}
+
+
+
+.runningLineWrapper {
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--textColor);
+}
+.runningLine {
+  font-size: 30px;
+  font-family: var(--text);
+  // text-transform: uppercase;
+  color: var(--bgColor);
+  white-space: nowrap;
+}
+.runningLine {
+  animation: run 20s linear infinite;
+}
+@keyframes run {
+  from {
+     transform: translateX(0%);
+  }
+  /* Magic is here. This is the width of the elem with text after rendering the page */
+  to {
+     transform: translateX(-883.35px);
+  }
+}
+
+
+
+// Responsive styles for smaller screens
+@media (max-width: 900px) {
+  .frontsection {
+    h1 {
+      font-size: 20vw;
+      margin: 0;
+    }
+
+    img {
+      width: 80vw;
+      height: auto;
+      margin: 60px 0 0;
+      border-radius: var(--imgRadius);
+    }
+  }
+}
+@media (max-width: 777px) {
+ 
+  .frontsection .videoSection {
+    display: block;
+    height: auto;
+  }
   
-   }
+  
+  .videoSection { 
 
+    video {
+      height: auto !important;
+      width: 100% !important;
+      border-left: none !important;
+      border-top: 2px solid;
+    }
+    .textSection {
+      width: auto !important;
 
- }
+    }
+  }
+}

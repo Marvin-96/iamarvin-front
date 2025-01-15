@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
-import { frontImage, renderStyle , wrapContent, postdataContent, wrapContentCentered} from './slug.module.scss'
+import { frontImage, renderStyle , wrapContent, rSection , postdataContent, tagSection, dateSection,  projectTag , slugMeta , accorche , wrapContentCentered} from './slug.module.scss'
 import Main from '@/components/main'
 import { getPostSlugs, getSinglePost } from "@/libs/posts";
-// import Date from "@/components/date";
+import { DateYear } from "@/components/date";
 import HeroSection from "@/components/hero-section";
 import Projetfrontimage from "@/components/projet-frontimage";
+import BackButton from "@/components/back-button";
 
 export async function getStaticProps({params}){ 
 
@@ -58,85 +59,43 @@ export default function Post( {postData ,featuredImageUrl } ){
     <title key={postData.slug}> {postData.title} </title>
     </Head>
     
-    <style>
-    {`
+   
 
-
-.iv-container {
- display: flex;
- justify-content: center;
- width: auto;
- font-family: var(--text);
-}
-
-.iv-wrapped {
- display: flex; 
- width: 90vw;
-}
-
-.Typo {
-  width: auto;
-}
-
-.Color-card {
-  width: 60px;
-  text-align: center;
-}
-
-.Color-Panel {
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.color-circle {
-  width: 60px;
-  height: 60px;
-  background-color: red;
-  border-radius: 100%;
-  
-}
-
-.color-name {
-  margin: 10px 0 30px 0;
-}
-
-@media (max-width: 765px) {
-  
-  .iv-wrapped {
-  display: block;
-  }
-  
-  .Color-Panel {
-  // margin:  30px auto 0  auto;
-  margin: 30px 0
-    
-  }
-
-  .Color-Panel-Inner {
-  margin-right: 40px;
-  }
-  
-}
-          `}
-    </style>
-
-    { featuredImageUrl &&  <Projetfrontimage PageName="dsds" BgImage={featuredImageUrl}/> } 
+    { featuredImageUrl &&  <Projetfrontimage  BgImage={featuredImageUrl}/> } 
     <Main>
     <div className={wrapContent}>
  
     <div className={wrapContentCentered}>
       <div>
       <div className={postdataContent}>
-            <div>
-        
-            {/* <h4> Dernière modification par Marvin le <Date dateString={postData.modified} /> </h4> */}
-            <h1> { postData.title } </h1>
-            {postData.tags.nodes.map(tag => (
-             <h2 key={tag.id}> {tag.name} </h2>
-            ))}
-       
-        </div>
+
+            <BackButton></BackButton>
+
+            <div  className={slugMeta}>
+                  <div className={accorche}>
+                  {/* <h4> Dernière modification par Marvin le <Date dateString={postData.modified} /> </h4> */}
+                  <h1> { postData.title } </h1>
+                  <h2> {postData.excerpt.replace(/<\/?[^>]+(>|$)/g, "")}</h2>
+                  
+                  </div>
+                  
+                  <div className={rSection}>
+                            <div className={dateSection}>
+                              <p> Année </p>
+                              <DateYear dateString={postData.date} />
+                            </div>
+
+                            <div className={tagSection}>
+                                <p> Réalisations </p>
+                                <ul>
+                                {postData.tags.nodes.map(tag => (
+                                <li  className={projectTag} key={tag.id}> {tag.name} </li>
+                                ))}
+                                </ul>
+                            </div>
+                  </div>
+            </div>
+
       </div>
 
         <div className={renderStyle} dangerouslySetInnerHTML={ {__html: postData.content} }></div>

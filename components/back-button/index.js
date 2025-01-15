@@ -11,7 +11,7 @@ const BackButton = () =>  {
   return (
 
           <>
-                    <Link href="/" className={goBack}> <i className={arrowleft}></i> Retour à l'accueil</Link>
+                    <Link href={"/"} className={goBack}> <i className={arrowleft}></i> Retour à l'accueil</Link>
           </>
 )}
 

@@ -15,104 +15,172 @@ img {
 }
 
 
-
-
 .renderStyle {
     display: block !important;
     color:   var(--textColor);
-    img {
+    img ,video {
     max-width: 100%;
     height: auto;
-    padding: 30px 0;
+    padding: 80px 0;
     align-items: center;
     align-content: center;    
 }
->div:first-child {
-    display: flex !important;
-    justify-content: space-between;
+
+// h3, p, ul {
+//     padding-left: var(--projectTextPadding);
+// }
+
+hr, video {
+    margin: 10px 0 ;
 }
 
-}
-
-
-
-.wrapContent  {
-
-    h3,p, ul {
-        padding: var( --projectTextPadding)
-    }
-
-    li {
-        font-weight: 300;
-    }
+h3 {
+    width: 30vw;
+    transform: translateY(24px);
+    font-family: var(--title);
+    font-weight: 500;
+    text-transform: uppercase;
+    list-style-type: decimal-leading-zero;
+ /* Utilise des numéros (1, 2, 3, ...) */
+    list-style-position: inside; /* Positionne la numérotation à l'intérieur */
+    display: list-item; /* Transforme le <h3> en élément de liste */
   
+}
 
-    h1 {
-        margin:  20px 0;
-        font-size: 16px !important;
-        word-break: break-all;
+h3::after {
+    content: "✦"; /* Ajoute le numéro/décimale comme contenu */
+    // color: red; /* Couleur spécifique pour la décimale */
+    
+    margin: 10px;
+    transform: translateX(20px) translateY( 10px);
+     /* Ajuste selon vos besoins pour aligner correctement */
+}
+
+p, ul {
+    padding-left: 37vw;
+}
+
+
+
+li {
+    font-weight: 300;
+    
+}
+
+
+h1 {
+    margin:  20px 0;
+    font-size: 16px !important;
+    word-break: break-all;
+    
+}
+
+ul {
+    margin: 10px 20px;
+}
+
+display: flex;
+justify-content: center;
+width: 100%;
+// background-color: red;
+
+p {
+    font-weight: 300;
+}
+strong {
+    color: var(--strongColor);
+}
+
+h1 {
+    font-size: var(--blogTitle);
+
+}
+
+h2 , h3 {
+    font-size: var(--titleSize);
+}
+
+}
+
+
+.slugMeta {
+    display: flex;
+    border: 2px solid;
+    width: 100%;
+    margin-top: 30px;
+   
+h1 {
+    font-size: 14px;
+    margin-bottom: 15px;
+} 
+
+    .accorche {
+        width: 68%;
+        // background-color: red;
+        border-right: 2px solid;
+        padding: 20px 10px;
+        p {
+            
+                  
+            font-size: var(--titleSize);
+            // font-size: 96px;
+            font-weight: 500;
+            color: var(--textColor);
+        }
+
+
+    }
+    
+    .tagSection {
+
+        padding: 5px;
+    }
+
+    .rSection {
+        width: 32%;
+    }
+    time {
+        font-size: 32px;
+        font-family: var(--text);
+    }
+
+    .dateSection {
+        border-bottom: 2px solid ;
+        width: 100%;
+        padding: 5px;
+        // background-color: red;
+    }
+
+    .projectTag {
+        
+        font-size: 14px;
+        border: 2px solid;
+        border-radius: 20px;
+        padding: 2px 10px;
+        margin: 5px 5px 0 0;
+        text-transform: uppercase;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li {
+        list-style: none;
+        font-size: 10px;
+
         
     }
-
-    h2 {
-        width: 60vw;
-    }
-
-    
-
-   ul {
-        margin: 30px;
-    }
-
-    
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    // background-color: red;
-
-    p {
-        // margin: 10px 0vw;
-        font-weight: 300;
-    }
-    strong {
-        color: var(--strongColor);
-    }
-
-    h1 {
-        font-size: var(--blogTitle);
-
-    }
-
-    h2 {
-        font-size: var(--titleSize);
-    }
-
-    h3 {
-        font-size: var(--titleSize);
-    }
 }
 
-.wrapContentCentered {
-    display: block;
-    width: 100vw;
-}
 
-.postdataContent {
-    
-    display: flex;
-    justify-content: center;
-    align-content: center !important;
-    
-    // width: 100%;
-    
 
-    div {
-    display: block;
-    width: 100%;
+// .wrapContentCentered {
+//     display: block;
+//     width: 100vw;
+// }
 
-    }
 
-}
 
 @media  (max-width: 765px) {
 .wrapContent  {
@@ -123,4 +191,38 @@ img {
        }
     
     }
+    .renderStyle {
+    p, ul {
+        padding-left: 0;
+    }
+
+    h3 {
+        transform: translate(0);
+        margin: 80px 00px 20px 0px;
+        width: auto;
+    }
+}
+}
+
+@media  (max-width: 633px) {
+.slugMeta  {
+
+    display: block;
+
+
+    .accorche  {
+        width: 100%;
+        border-right: none;
+        padding: 20px 10px;
+    }
+
+    .rSection {
+        border-top: 2px solid ;
+        width: 100%;
+    }
+
+    }
+
+
+
 }

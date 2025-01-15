@@ -11,7 +11,7 @@ const Logo = () =>  {
   return (
 
           <>
-                    <Link href="/" className={logo}> Marvin Mensah</Link>
+                    <Link href="/" className={logo}> Marvin Mensah ✦</Link>
           </>
 )}
 

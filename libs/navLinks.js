@@ -8,14 +8,14 @@ const navLinks = [
     type: "lien"
   },
   {
-    slug: " Ma Galerie",
-    link: "/galerie",
-    type: "lien"
-  },
-  {
     slug: "Mes Projets",
     link: "/mes-projets",
     type: "social"
+  },
+  {
+    slug: " Ma Galerie",
+    link: "/galerie",
+    type: "lien"
   },
   {
     slug: "Mon Profil",

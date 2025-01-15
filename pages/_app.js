@@ -8,35 +8,10 @@ import Navbar from  '@/components/navbar'
 import Footer from  '@/components/footer'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { motion } from "framer-motion"
 
 // const robineDemo = RobineDemo({ subsets: ['latin'] })
 
-function Loading(){
-  const router = useRouter();
-  const [loading, setLoading] = useState(false);
-  
-  useEffect(() => {
-      const handleStart = (url) => (url !== router.asPath) && setLoading(true);
-      const handleComplete = (url) => (url === router.asPath)  &&  setLoading(false);
-      router.events.on('routeChangeStart', handleStart)
-      router.events.on('routeChangeComplete', handleComplete)
-      router.events.on('routeChangeError', handleComplete)
-      
-
-      return () => {
-        router.events.off('routeChangeStart', handleStart)
-        router.events.off('routeChangeComplete', handleComplete)
-        router.events.off('routeChangeError', handleComplete)
-      }
-
-  })
-
-  return loading && (
-    <div className='loading-bg'>
-      <div className='loading-element'></div>
-    </div>
-  )
-}
 
  function App({ Component, pageProps }) {
 
@@ -44,18 +19,38 @@ function Loading(){
     AOS.init({ duration: 1000 });
 
 }, []);
+
+const anim = (variants) => {
+
+    return {
+      initial: "initial",
+      animate: "animate",
+      exit: "exit",
+      variants
+    }
+    }
+
+    const opacity = {
+      initial: {
+        opacity: 0
+      },
+      enter: {
+        opacity: 0
+      },
+      exit: {
+        opacity: 0
+      }
+}
+
   return (
     <>
-    
-    <Header />
-
-    {/* <Loading /> */}
-
-    <Navbar />
-    
-      <Component {...pageProps} />
-    
-    <Footer />
+    {/* <motion.div {...anim(opacity)}> */}
+        <Header />
+        <Navbar />
+        
+          <Component {...pageProps} />
+        <Footer />
+    {/* </motion.div> */}
   </>
   )
 }

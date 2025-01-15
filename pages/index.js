@@ -37,7 +37,9 @@ export default function Home({allPortfolioPost}) {
         <section className='content'>   
           <div>
             <div className='presentationtxt'>
-          <p data-aos="fade-up"> J'aime imaginer, créer et prototyper. Me lancer dans des projets voir leurs evolutions.</p>  
+                  
+                  <p data-aos="fade-up"> Je suis une <span>Product Designer</span> diplomée d' 
+                  <span>IIM - Digital School Paris.</span> J'ai eu l'opportunité de travailler au sein d'une <span>Start-Up Francaise</span>  nommée <span>tinycoaching</span>  </p>  
           </div>
           <div className='Social' data-aos="fade-up"> 
             <h4>Mes reseaux</h4>

@@ -1,15 +1,17 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import { parseISO, format } from 'date-fns';
 import fr from 'date-fns/locale/fr';
-import { parseISO , format } from 'date-fns';
 
+export function Date({ dateString }) {
+  const date = parseISO(dateString);
+  return (
+    <time dateTime={dateString}>{format(date, 'dd/LL/yyyy', { locale: fr })}</time>
+  );
+}
 
-export default function Date({dateString}) {
-    const date = parseISO(dateString);
-    const locale = fr;
-    
-    return (
-        <time dateTime={dateString}> {format(date, 'dd/LL/yyyy', {locale})} </time>
-        );
- 
+export function DateYear({ dateString }) {
+  const date = parseISO(dateString);
+  return (
+    <time dateTime={dateString}>{format(date, 'yyyy', { locale: fr })}</time>
+  );
 }

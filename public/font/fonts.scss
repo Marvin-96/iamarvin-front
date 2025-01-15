@@ -1,15 +1,7 @@
-@font-face {
-
-    font-family: 'Unbounded';
-    src : url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
- 
-    font-family: "Outfit";
-    src: url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-  }
-
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Outfit:wght@100..900&family=Big+Shoulders+Text:wght@100..900&display=swap');
 
 body {
-    --title: 'Unbounded', sans-serif;
-    // --text:  'Work Sans', sans-serif;
-    --text:  'Outfit', sans-serif;
-  }
+  --title: 'Big Shoulders Text', serif;
+  --text: 'Outfit', sans-serif;
+  font-family: var(--title);
+}

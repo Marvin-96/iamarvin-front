@@ -1,21 +1,26 @@
 .goBack {
   border: 2px;
-  background: var(--secondaryColor);
-  color: var(--bgColor);
+  // background: var(--secondaryColor);
+  // background: var(--secondaryColor);
+  // color: var(--bgColor);
+  color: var(--secondaryColor);
   padding: 10px 20px; 
   border-radius: 30px;
+  border: 2px var(--secondaryColor) solid;
   text-decoration: none;
-  
+  // font-family: var(--title);
+  text-transform: uppercase;
 }
 
 .goBack:hover {
-  background-color: var(--pimaryColor);
+  background-color: var(--primaryColor);
   transition: 0.4s;
   color: var(--bgColor);
 }
 
 .arrowleft {
-  border: solid var(--bgColor);
+  border: solid var(--secondaryColor);
+  // border: solid var(--bgColor);
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;

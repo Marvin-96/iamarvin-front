@@ -7,7 +7,7 @@ import Main from '@/components/main'
 import WrappedProject from "@/components//wrapped-project"
 import FeatureImage from '@/components/feature-image'
 import { getAllPosts } from '@/libs/posts'
-import Date from '@/components/date'
+import { Date } from '@/components/date'
 import MainArticlePreview from '@/components/main-article-preview'
 import Head from 'next/head'
 import HeroSection from '@/components/hero-section'

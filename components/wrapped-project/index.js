@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from "next/image"
 import Arrow from "@/public/arrow.svg"
 // import '../../styles/global.scss'
-import Date from "../date"
+import { Date } from "../date"
 import FeatureImage from "../feature-image"
 import MainArticlePreview from "../main-article-preview"
 

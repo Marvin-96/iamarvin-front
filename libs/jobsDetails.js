@@ -17,7 +17,7 @@ const jobsDetails = [
     {
       name: "Ikea",
       role: "Vendeur & Conseiller",
-      description: "Conseiller la clientèle, planification de commande, organisation des places des ventes et (prenote)",
+      description: "Conseiller la clientèle, planification de commande, organisation des places des ventes ",
       date: "2019-2021",
     },
     {

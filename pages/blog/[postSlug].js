@@ -3,13 +3,13 @@ import Image from "next/image";
 import { frontImage, renderStyle , tagName, postMeta , wrapContent, postdataContent, wrapContentCentered} from './slug.module.scss'
 import Main from '@/components/main'
 import { getPostSlugs, getSinglePost } from "@/libs/posts";
-import Date from "@/components/date";
+import { Date } from "@/components/date";
 import Link from "next/image"
 
 
 export async function getStaticProps({params}){ 
   const postData = await getSinglePost(params.postSlug);
-  console.log(postData);
+  console.log(postData);  
   
   let featuredImageUrl = "http://localhost:8888/iamarvin-back/wp-content/uploads/2024/01/default-thumb.png";
   

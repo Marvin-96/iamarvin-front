@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { heroSection , heroContent , heroNav } from './projet-frontimage.module.scss'
 import BackButton from '../back-button';
 
-export default function Projetfrontimage({BgImage, PageName }) {
+export default function Projetfrontimage({BgImage }) {
   return(
     <div  data-aos="fade-down" 
     data-aos-duration="1000" 
