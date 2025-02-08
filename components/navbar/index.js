@@ -63,10 +63,11 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
+              {/* Passe l'état et le toggle au BurgerBtn */}
+      <BurgerBtn state={state} toggleBurger={toggleBurger} />
       </div>
 
-      {/* Passe l'état et le toggle au BurgerBtn */}
-      <BurgerBtn state={state} toggleBurger={toggleBurger} />
+
     </nav>
   );
 };

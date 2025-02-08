@@ -38,7 +38,7 @@
   --projectTextPadding: 0 10vw;
   --screenMargin: 40px;
   
-  --imgRadius: 0px;
+  --imgRadius: 4px;
 
   @media  (max-width: 1024px) { 
     --thumbWidth: 100% ;
@@ -103,12 +103,12 @@
   // flex-flow: column wrap;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 1.1vw;
   grid-auto-rows: minmax(100px, auto);
 
-  div:nth-child(2) ,   div:nth-child(5) , div:nth-child(8) {
-    padding-top: var(--gridPadding);
-  }
+  // div:nth-child(2) ,   div:nth-child(5) , div:nth-child(8) {
+  //   padding-top: var(--gridPadding);
+  // }
   
 }
 
@@ -267,13 +267,13 @@
     // justify-content: space-between;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0;
+    grid-gap: 1.1vw;
 
     // grid-auto-rows: minmax(100px, auto);
 
-    div:nth-child(2) ,   div:nth-child(5) , div:nth-child(8) {
-      padding-top: var(--gridPadding);
-    }
+    // div:nth-child(2) ,   div:nth-child(5) , div:nth-child(8) {
+    //   padding-top: var(--gridPadding);
+    // }
 
   
 }
@@ -382,7 +382,7 @@
     // flex-flow: column wrap;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-gap: 1.1vw;
     grid-auto-rows: minmax(100px, auto);
     
   }
@@ -401,7 +401,7 @@
     // flex-flow: column wrap;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
+    grid-gap: 1.1vw;
     grid-auto-rows: minmax(100px, auto);
     
   }

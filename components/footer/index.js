@@ -7,12 +7,17 @@ import Image from "next/image"
 import xIcon from "@/public/x-icon.svg"
 import linkedinIcon from "@/public/linkedin-icon.svg"
 import dribbbleIcon from "@/public/dribbble-icon.svg"
+import { footerLinks, language } from '@/libs/footerLink'; // Correction de l'importation
 
 const Footer = () =>  {
   const [year, setYear] = useState(new Date().getFullYear());
   useEffect(() => {
     setYear(new Date().getFullYear());
   }, []);
+
+
+
+const selectedFooterLinks = footerLinks[language] || []; // Sécurité pour éviter undefined
 
 
   return (
@@ -38,7 +43,7 @@ const Footer = () =>  {
                     
                     <ul className={menuSection}>
                     <h3> Menu </h3>  
-                    {footerLink.map(link => {
+                    {selectedFooterLinks.map(link => {
                           if (link.type === "lien") {
                             return (
                               <li key={link.id}>

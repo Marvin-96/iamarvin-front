@@ -5,11 +5,11 @@
     position: fixed;
     width: 100vw;
     // height: 40px;
-    padding: 10px var(--screenMargin);
+    padding: 0px var(--screenMargin);
     justify-content: center;
     z-index: 10;
     text-transform: uppercase;
-    border-bottom: 1px solid;
+  
     
     
 
@@ -19,6 +19,8 @@
     justify-content: space-between;
     display: flex;
     width: 98vw;
+    padding: 8px 0;
+    border-bottom: 1px solid;
 }
 
   .menu   {
