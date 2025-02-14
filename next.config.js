@@ -1,26 +1,22 @@
+// const { i18n } = require('./next-i18next.config');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "export",
   reactStrictMode: true,
-  images: { 
+  images: {
     remotePatterns: [
-    // {
-    //   protocol: 'http',
-    //   hostname: 'localhost',
-    //   port: '8888',
-    //   pathname: '/**',
-    // },
-    {
-      protocol: 'https',
-      hostname: 'iamarvin.com',
-      port: '',
-      pathname: '/**',
-    }
-    
-  ]
+      {
+        protocol: 'https',
+        hostname: 'iamarvin.com',
+        port: '',
+        pathname: '/**',
+      }
+    ]
+  },
+  i18n: {
+    locales: ['en', 'fr'], 
+    defaultLocale: 'fr',   
   }
- 
-
 }
 
 module.exports = nextConfig;

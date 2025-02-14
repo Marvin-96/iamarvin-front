@@ -1,3 +1,4 @@
+import { useI18n, useScopedI18n } from '../locales';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
@@ -8,9 +9,10 @@ import { getAllPortfolioPost } from '@/libs/posts';
 import Section from '@/components/section';
 import Head from 'next/head';
 import Arrowup from "@/public/arrow-up-right.svg";
-import { jobsDetails, language } from '@/libs/jobsDetails'; // Correction de l'importation
-import { footerLinks } from '@/libs/footerLink'; 
+import { jobsDetails } from '@/libs/jobsDetails';
+import { footerLinks } from '@/libs/footerLinks'; 
 import JobDetail from '@/components/jobdetail';
+import { useRouter } from 'next/router';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,13 +26,15 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPortfolioPost }) {
+  const landingT = useScopedI18n("landing");
+  const router = useRouter();
+  const lang = router.locale || 'fr'; // Récupération de la langue actuelle (fr par défaut)
+  const selectedJobDetails = jobsDetails(lang); // Récupération des expériences en fonction de la langue
 
-  const selectedJobDetails = jobsDetails[language] || []; // Sécurité pour éviter undefined
-  const selectedFooterLinks = footerLinks[language] || []; // Sécurité pour éviter undefined
   return (
     <>
       <Head>
-        <title>Accueil | Marvin Mensah</title>
+        <title>{landingT('title')} | Marvin Mensah</title>
       </Head>
 
       <Frontsection />
@@ -38,26 +42,11 @@ export default function Home({ allPortfolioPost }) {
         <section className='content'>
           <div>
             <div className='presentationtxt'>
-              <p data-aos="fade-up">
-                Je suis un <span>Product Designer</span> diplômé d'
-                <span>IIM - Digital School Paris.</span> J'ai eu l'opportunité de travailler au sein d'une
-                <span>Start-Up Française</span> nommée <span>tinycoaching</span>.
-              </p>
+              <p data-aos="fade-up" dangerouslySetInnerHTML={{ __html: landingT('presentation') }} />
             </div>
 
             <div className='Social' data-aos="fade-up">
-              <h4>Mes réseaux</h4>
-              <ul>
-                {selectedFooterLinks.map((link, index) => 
-                  link.type === "social" ? (
-                    <li key={index}>
-                      <a target="_blank" href={link.link} rel="noopener noreferrer">
-                        {link.slug} <Image src={Arrowup} alt="Arrow icon" />
-                      </a>
-                    </li>
-                  ) : null
-                )}
-              </ul>
+              <h4>{landingT('social')}</h4>
             </div>
           </div>
 
@@ -72,7 +61,7 @@ export default function Home({ allPortfolioPost }) {
           </div>
         </section>
 
-        <h2 className="ProjectSectionTitle">Voici quelques-uns de mes projets !</h2>
+        <h2 className="ProjectSectionTitle">{landingT('projects')}</h2>
 
         <section>
           <div className='griddiv'>
@@ -91,12 +80,12 @@ export default function Home({ allPortfolioPost }) {
         </section>
 
         <div>
-          <h2 className="ProjectSectionTitle">Mes expériences professionnelles</h2>
+          <h2 className="ProjectSectionTitle">{landingT('experiences')}</h2>
           <div className='Jobwrapped'>
             {selectedJobDetails.map((job, index) =>
               index < 3 ? (
                 <JobDetail
-                  key={job.id}
+                  key={index}
                   name={job.name}
                   role={job.role}
                   description={job.description}
@@ -107,7 +96,7 @@ export default function Home({ allPortfolioPost }) {
 
             <div className='jobbutton' data-aos="fade-up" data-aos-duration={2}>
               <a className='CVlink' href='https://iamarvin.com/iamarvin_front/media/CV-Marvin-mensah2024_compressed.pdf' target="_blank" rel="noopener noreferrer">
-                Voir mon Curriculum vitae
+                {landingT('see_cv')}
               </a>
             </div>
           </div>

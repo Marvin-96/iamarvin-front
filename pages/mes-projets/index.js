@@ -1,69 +1,55 @@
-
-import Image from 'next/image'
-import styles from '@/styles/Home.module.css'
-import { useEffect, useState } from 'react'
-import Link from 'next/link'
-import Main from '@/components/main'
-import FeatureImage from '@/components/feature-image'
-import { getAllPortfolioPost } from '@/libs/posts'
-import {PostGrid , AlbumPreview , albumPresentation } from './mes-projets.module.scss'
-import Head from 'next/head'
-import HeroSection from '@/components/hero-section'
-import ProjectPreview from '@/components/project-preview'
+import Image from 'next/image';
+import styles from '@/styles/Home.module.css';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import Main from '@/components/main';
+import FeatureImage from '@/components/feature-image';
+import { getAllPortfolioPost } from '@/libs/posts';
+import { PostGrid, AlbumPreview, albumPresentation } from './mes-projets.module.scss';
+import Head from 'next/head';
+import HeroSection from '@/components/hero-section';
+import ProjectPreview from '@/components/project-preview';
+import { useI18n, useScopedI18n } from '@/locales'; // Import des traductions
 
 export async function getStaticProps() {
   const allPortfolioPost = await getAllPortfolioPost();
 
-return {
-  props: {
-    allPortfolioPost: allPortfolioPost,
-  },
-}
+  return {
+    props: {
+      allPortfolioPost: allPortfolioPost,
+    },
+  };
 }
 
-export default function mesProjets({ allPortfolioPost }) {
-  const backgroundImage = "https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2024/04/alvaro-reyes-qWwpHwip31M-unsplash-min-scaled.jpg";
+export default function MesProjets({ allPortfolioPost }) {
+  const backgroundImage =
+    'https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2024/04/alvaro-reyes-qWwpHwip31M-unsplash-min-scaled.jpg';
+
+  const t = useI18n(); // Hook global pour la traduction
+  const projectsT = useScopedI18n('projects'); // Traductions spécifiques à la page "Mes Projets"
+
   return (
     <>
-      {console.log(allPortfolioPost)}
-
       <Head>
-        <title>Mes projets | Marvin Mensah</title>
-    </Head>
-      <HeroSection PageName="Mes projets" 
-                   BgImage={backgroundImage} 
- 
-                   />
-      
+        <title>{t('projects.page_title')} | Marvin Mensah</title>
+      </Head>
+
+      <HeroSection PageName={t('projects.page_title')} BgImage={backgroundImage} />
+
       <Main>
-    
-      
+        <div>
+          <div className={albumPresentation}>
+            <h2>{projectsT('latest_projects')}</h2>
+            {/* <p>{projectsT('photo_description')}</p> */}
+          </div>
 
-
-      <div>
-                  
-
-        <div className={albumPresentation}> 
-          <h2> Mes derniers Projets </h2> 
-          {/* <p> Voici une selection de mes photos. Je prends mes photos avec un Fudjifilm X S-10 avec un objectif 15-45mm. <br /> J'utilise également un Iphone 15 Pro Max. </p> */}
-        
+          <div className="PostGrid">
+            {allPortfolioPost.nodes.map((post, index) => (
+              <ProjectPreview key={post.id} title={post.title} post={post} index={index} slug={post.slug} />
+            ))}
+          </div>
         </div>
-        <div className="PostGrid">
-        { allPortfolioPost.nodes.map((post , index) =>  (  
-
-               <ProjectPreview key={post.id}
-                              title={post.title} 
-                              post={post}
-                              index={index}
-                              slug={post.slug}
-              />
-          )  
-        )}  </div> 
-
-      </div>
       </Main>
     </>
   );
 }
-
-

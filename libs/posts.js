@@ -1,172 +1,80 @@
-import graphqlRequest from "./graphqlRequest"
+import graphqlRequest from "./graphqlRequest";
 
-export async function getAllPosts()  {
-    
-    const query = { 
-        
-        query: `query getAllposts {
-          posts(where: {orderby: {field: DATE, order: DESC}, categoryName: "article"}) {
-            nodes {
-              title
-              date
-              excerpt
-              featuredImage {
-                node {
-                  mediaDetails {
-                    file
-                    sizes {
-                      sourceUrl
-                      width
-                      height
-                    }
-                  }
-                }
-              }
-              categories {
-                nodes {
-                  slug
-                }
-              }
-              slug
-              tags {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-            }
-            pageInfo {
-              endCursor
-              hasNextPage
-              hasPreviousPage
-              startCursor
-            }
-          }
-        }`
-    
-    };
-
-
-const resJson = await graphqlRequest(query);
-const allPosts = resJson.data.posts;
-
-return allPosts;
-}
-
-
-export async function getAllPortfolioPost()  {
-    
-  const query = { 
-      
-      query: `query getPortfolioPost  {
-        posts(where: {orderby: {field: DATE, order: DESC}, categoryName: "portfolio"}) {
-          nodes {
-            title
-            date
-            excerpt
-            featuredImage {
-              node {
-                mediaDetails {
-                  file
-                  sizes {
-                    sourceUrl
-                    width
-                    height
-                  }
-                }
-              }
-            }
-            categories {
-              nodes {
-                slug
-              }
-            }
-            slug
-            tags {
-              edges {
-                node {
-                  name
-                }
-              }
-            }
-          }
-          pageInfo {
-            endCursor
-            hasNextPage
-            hasPreviousPage
-            startCursor
-          }
+// Fragments GraphQL pour éviter la duplication
+const postFields = `
+  title
+  date
+  excerpt
+  featuredImage {
+    node {
+      mediaDetails {
+        file
+        sizes {
+          sourceUrl
+          width
+          height
         }
-      }`
-  
+      }
+    }
+  }
+  categories {
+    nodes {
+      slug
+    }
+  }
+  slug
+  tags {
+    edges {
+      node {
+        name
+      }
+    }
+  }
+`;
+
+const postConnectionFields = `
+  nodes {
+    ${postFields}
+  }
+  pageInfo {
+    endCursor
+    hasNextPage
+    hasPreviousPage
+    startCursor
+  }
+`;
+
+// Fonction générique pour récupérer les publications
+async function getPosts(categoryName, lang = "fr", order = "DESC") {
+  const category = lang === "en" ? `${categoryName}-en` : categoryName; // Ajout de la logique de langue
+  const query = {
+    query: `query getPosts {
+      posts(where: {orderby: {field: DATE, order: ${order}}, categoryName: "${category}"}) {
+        ${postConnectionFields}
+      }
+    }`,
   };
 
-
-const resJson = await graphqlRequest(query);
-const allPortfolioPost = resJson.data.posts;
-
-return allPortfolioPost;
+  const resJson = await graphqlRequest(query);
+  return resJson.data.posts;
 }
-export async function getAllGaleriePosts()  {
-    
-  const query = { 
-      
-      query: `query getGaleriePost  {
-        posts(where: {orderby: {field: DATE, order: ASC}, categoryName: "galerie"}) {
-          nodes {
-            title
-            date
-            excerpt
-            featuredImage {
-              node {
-                mediaDetails {
-                  file
-                  sizes {
-                    sourceUrl
-                    width
-                    height
-                  }
-                }
-              }
-            }
-            categories {
-              nodes {
-                slug
-              }
-            }
-            slug
-            tags {
-              edges {
-                node {
-                  name
-                }
-              }
-            }
-          }
-          pageInfo {
-            endCursor
-            hasNextPage
-            hasPreviousPage
-            startCursor
-          }
-        }
-      }`
-  
-  };
 
+// Fonctions spécifiques utilisant la fonction générique
+export async function getAllPosts(lang = "fr") {
+  return getPosts("article", lang);
+}
 
-const resJson = await graphqlRequest(query);
-const allGaleriePost = resJson.data.posts;
+export async function getAllPortfolioPost(lang = "fr") {
+  return getPosts("portfolio", lang);
+}
 
-return allGaleriePost;
+export async function getAllGaleriePosts(lang = "fr") {
+  return getPosts("galerie", lang, "ASC"); // Ordre croissant pour la galerie
 }
 
 
-export async function getSinglePost(slug) {
-
-  const query = { 
-        
+export async function getSinglePost(slug, lang = "fr") {
+  const query = {
     query: `query getPostSlugs {
       post(id: "${slug}", idType: SLUG) {
         id
@@ -194,27 +102,24 @@ export async function getSinglePost(slug) {
           }
         }
       }
-    }`
+    }`,
   };
   const resJson = await graphqlRequest(query);
   const singlePost = resJson.data.post;
   return singlePost;
 }
 
-
-export async function getPostSlugs() {
-
-  const query = { 
-        
-    query: `query getPostSlugs {
-        posts {
-          nodes {
-            slug
+export async function getPostSlugs(lang = "fr") {
+    const query = {
+      query: `query getPostSlugs {
+          posts(where: {categoryName_contains: "${lang === "en" ? "-en" : ""}"}) {
+            nodes {
+              slug
+            }
           }
-        }
-      }`
-  };
-  const resJson = await graphqlRequest(query);
-  const slugs = resJson.data.posts.nodes;
-  return slugs;
-}
+        }`,
+    };
+    const resJson = await graphqlRequest(query);
+    const slugs = resJson.data.posts.nodes;
+    return slugs;
+  }

@@ -1,58 +1,52 @@
-import {useEffect, useState} from 'react'
-import  {useRouter} from "next/router"
-import '@/styles/globals.scss'
-// import { RobineDemo } from'@/public/font/iamarvin/RobineDemoRegular-L3ezn.otf'
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import '@/styles/globals.scss';
 import '@/public/font/fonts.scss';
-import Header from  '@/components/header'
-import Navbar from  '@/components/navbar'
-import Footer from  '@/components/footer'
+import Header from '@/components/header';
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion';
+import { I18nProvider } from '@/locales';
 
-// const robineDemo = RobineDemo({ subsets: ['latin'] })
+function App({ Component, pageProps }) {
 
-
- function App({ Component, pageProps }) {
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
+  }, []);
 
-}, []);
 
-const anim = (variants) => {
 
-    return {
-      initial: "initial",
-      animate: "animate",
-      exit: "exit",
-      variants
-    }
-    }
 
-    const opacity = {
-      initial: {
-        opacity: 0
-      },
-      enter: {
-        opacity: 0
-      },
-      exit: {
-        opacity: 0
-      }
-}
+
+  const anim = (variants) => ({
+    initial: 'initial',
+    animate: 'animate',
+    exit: 'exit',
+    variants,
+  });
+
+  const opacity = {
+    initial: { opacity: 0 },
+    enter: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
 
   return (
-    <>
-    {/* <motion.div {...anim(opacity)}> */}
+    <I18nProvider locale="fr"> {/* Mets la langue par défaut ici */}
+      <>
+        {/* <motion.div {...anim(opacity)}> */}
         <Header />
         <Navbar />
-        
-          <Component {...pageProps} />
+        <Component {...pageProps} />
         <Footer />
-    {/* </motion.div> */}
-  </>
-  )
+        {/* </motion.div> */}
+      </>
+    </I18nProvider>
+  );
 }
 
-export default App
+export default App;

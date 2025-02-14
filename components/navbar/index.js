@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useI18n } from "@/locales"; // Import du hook de traduction
+import getNavLinks from "@/libs/navLinks"; // Import de la fonction qui génère les liens dynamiquement
 
 import {
-  logo,
   rightmenu,
   upLinkBtn,
   navbarcontent,
@@ -11,16 +12,16 @@ import {
   linksSection,
 } from "./navbar.module.scss";
 
-import navLinks from "@/libs/navLinks";
 import BurgerBtn from "../burgerBtn";
 import Logo from "../logo";
 
 const Navbar = () => {
   const [state, setState] = useState("close");
-
   const router = useRouter();
+  const t = useI18n(); // Récupération des traductions
 
-  // Ferme le menu burger au changement de route
+  const navLinks = getNavLinks(t); // Appel de la fonction avec `t`
+
   useEffect(() => {
     const handleRouteChange = () => {
       setState("close");
@@ -33,9 +34,7 @@ const Navbar = () => {
     };
   }, [router.events]);
 
-  // Fonction pour ouvrir/fermer le menu burger
   const toggleBurger = () => {
-    const links = document.querySelector("#rightMenu");
     const upLink = document.querySelector("#upLinkBtn");
     const allUpLink = document.querySelectorAll("#upLinkBtn li");
 
@@ -54,8 +53,8 @@ const Navbar = () => {
 
         <div className={rightmenu} id="rightMenu">
           <ul className={upLinkBtn} id="upLinkBtn">
-            {navLinks.map((navlink) => (
-              <li id={navlink.id} key={navlink.id}>
+            {navLinks.map((navlink, index) => (
+              <li key={index}>
                 <Link href={navlink.link}>
                   <div className={linksSection}>{navlink.slug}</div>
                 </Link>
@@ -63,11 +62,8 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-              {/* Passe l'état et le toggle au BurgerBtn */}
-      <BurgerBtn state={state} toggleBurger={toggleBurger} />
+        <BurgerBtn state={state} toggleBurger={toggleBurger} />
       </div>
-
-
     </nav>
   );
 };

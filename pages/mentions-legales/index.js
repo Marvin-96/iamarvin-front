@@ -1,48 +1,41 @@
 import Head from "next/head";
-import Image from "next/image";
 import Main from '@/components/main'
-import Date from "@/components/date";
-import Link from "next/image"
-import Jobdetail from '@/components/jobdetail'
-import jobsDetails from '@/libs/jobsDetails'
+import { useRouter } from 'next/router';
+import { useScopedI18n } from '@/locales';
 
-
-export default function mentionsLegales() {
-
+export default function MentionsLegales() {
+  const router = useRouter();
+  const lang = router.locale || 'fr'; // Récupère la langue actuelle
+  const mentionsT = useScopedI18n("mentions_legales"); // Utilisation du hook de traduction pour la page mentions légales
 
   return (
     <>
       <Head>
-        <title>Mentions Legales</title>
+        <title>{mentionsT('title')}</title>
       </Head>
 
       <Main>
-        <h1> Mentions Legales </h1>
+        <h1>{mentionsT('title')}</h1>
 
-        <h2>  Propriétaire du site :</h2>
+        <h2>{mentionsT('owner.title')}</h2>
         <p>
-          Nom :  Marvin Mensah <br />
-          Adresse : 18e allée de la louvière, Courdimanche 95800 <br />
-          Email : marvinmensah95@gmail.com <br />
+          {mentionsT('owner.name')} <br />
+          {mentionsT('owner.address')} <br />
+          Email : {mentionsT('owner.email')} <br />
         </p>
         <br />
-        <h2>Hébergement :</h2>
+
+        <h2>{mentionsT('hosting.title')}</h2>
         <p>
-          Le site est hébergé par : <br />
-          Hostinger International Ltd. <br />
-          Adresse : 61 Lordou Vironos Street, 6023 Larnaca, Chypre <br />
-          Site web : <a href="www.hostinger.fr"> www.hostinger.fr</a>
+          {mentionsT('hosting.provider')} <br />
+          {mentionsT('hosting.address')} <br />
+          Site web : <a href="https://www.hostinger.fr">{mentionsT('hosting.website')}</a>
         </p>
         <br />
-        
-       
-          <h2>Propriété intellectuelle :</h2>
-          <p>
-          Tout le contenu présent sur ce site, y compris les textes, images, vidéos, logos, et autres éléments graphiques, est la propriété exclusive de [Ton nom ou nom de ton entreprise], sauf mention contraire. Toute reproduction, distribution, modification, ou utilisation de ces contenus sans autorisation écrite préalable est strictement interdite.
-        </p>
+
+        <h2>{mentionsT('intellectual_property.title')}</h2>
+        <p>{mentionsT('intellectual_property.description')}</p>
       </Main>
     </>
-  )
-
-
+  );
 }
