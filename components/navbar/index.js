@@ -14,6 +14,7 @@ import {
 
 import BurgerBtn from "../burgerBtn";
 import Logo from "../logo";
+import LanguageSwitcher from "../language-switcher";
 
 const Navbar = () => {
   const [state, setState] = useState("close");
@@ -60,8 +61,11 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+        
           </ul>
+          <LanguageSwitcher />
         </div>
+
         <BurgerBtn state={state} toggleBurger={toggleBurger} />
       </div>
     </nav>

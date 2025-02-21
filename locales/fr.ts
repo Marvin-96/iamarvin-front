@@ -69,7 +69,7 @@ export default {
     "owner": {
       "title": "Propriétaire du site :",
       "name": "Marvin Mensah",
-      "address": "18e allée de la louvière, Courdimanche 95800",
+      "address": "Courdimanche 95800 - France",
       "email": "marvinmensah95@gmail.com"
     },
     "hosting": {
@@ -106,5 +106,11 @@ export default {
     "linkedin": "LinkedIn",
     "dribbble": "Dribbble"
   },
+
+
+    "backButton": {
+      "returnHome": "Retour à l'accueil"
+    }
+
 
 };

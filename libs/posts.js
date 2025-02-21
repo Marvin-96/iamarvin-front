@@ -1,6 +1,5 @@
 import graphqlRequest from "./graphqlRequest";
 
-// Fragments GraphQL pour éviter la duplication
 const postFields = `
   title
   date
@@ -44,12 +43,10 @@ const postConnectionFields = `
   }
 `;
 
-// Fonction générique pour récupérer les publications
-async function getPosts(categoryName, lang = "fr", order = "DESC") {
-  const category = lang === "en" ? `${categoryName}-en` : categoryName; // Ajout de la logique de langue
+async function fetchPosts(categoryName, orderBy = { field: 'DATE', order: 'DESC' }) {
   const query = {
     query: `query getPosts {
-      posts(where: {orderby: {field: DATE, order: ${order}}, categoryName: "${category}"}) {
+      posts(where: {orderby: {field: ${orderBy.field}, order: ${orderBy.order}}, categoryName: "${categoryName}"}) {
         ${postConnectionFields}
       }
     }`,
@@ -59,21 +56,27 @@ async function getPosts(categoryName, lang = "fr", order = "DESC") {
   return resJson.data.posts;
 }
 
-// Fonctions spécifiques utilisant la fonction générique
-export async function getAllPosts(lang = "fr") {
-  return getPosts("article", lang);
+export async function getAllPosts() {
+  return fetchPosts("article");
 }
 
-export async function getAllPortfolioPost(lang = "fr") {
-  return getPosts("portfolio", lang);
+export async function getAllPostsEN() {
+  return fetchPosts("article-en");
 }
 
-export async function getAllGaleriePosts(lang = "fr") {
-  return getPosts("galerie", lang, "ASC"); // Ordre croissant pour la galerie
+export async function getAllPortfolioPost() {
+  return fetchPosts("portfolio");
 }
 
+export async function getAllPortfolioPostEN() {
+  return fetchPosts("portfolio-en");
+}
 
-export async function getSinglePost(slug, lang = "fr") {
+export async function getAllGaleriePosts() {
+  return fetchPosts("galerie", { field: 'DATE', order: 'ASC' });
+}
+
+export async function getSinglePost(slug) {
   const query = {
     query: `query getPostSlugs {
       post(id: "${slug}", idType: SLUG) {
@@ -105,21 +108,19 @@ export async function getSinglePost(slug, lang = "fr") {
     }`,
   };
   const resJson = await graphqlRequest(query);
-  const singlePost = resJson.data.post;
-  return singlePost;
+  return resJson.data.post;
 }
 
-export async function getPostSlugs(lang = "fr") {
-    const query = {
-      query: `query getPostSlugs {
-          posts(where: {categoryName_contains: "${lang === "en" ? "-en" : ""}"}) {
-            nodes {
-              slug
-            }
+export async function getPostSlugs() {
+  const query = {
+    query: `query getPostSlugs {
+        posts {
+          nodes {
+            slug
           }
-        }`,
-    };
-    const resJson = await graphqlRequest(query);
-    const slugs = resJson.data.posts.nodes;
-    return slugs;
-  }
+        }
+      }`,
+  };
+  const resJson = await graphqlRequest(query);
+  return resJson.data.posts.nodes;
+}

@@ -5,19 +5,20 @@ import styles from '@/styles/Home.module.css';
 import Frontsection from '@/components/frontsection';
 import Main from '@/components/main';
 import ProjectPreview from '@/components/project-preview';
-import { getAllPortfolioPost } from '@/libs/posts';
+import { getAllPortfolioPost , getAllPortfolioPostEN } from '@/libs/posts';
 import Section from '@/components/section';
 import Head from 'next/head';
 import Arrowup from "@/public/arrow-up-right.svg";
 import { jobsDetails } from '@/libs/jobsDetails';
-import { footerLinks } from '@/libs/footerLinks'; 
+import { getFooterLinks } from '@/libs/footerLinks'; 
 import JobDetail from '@/components/jobdetail';
 import { useRouter } from 'next/router';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export async function getStaticProps() {
-  const allPortfolioPost = await getAllPortfolioPost();
+export async function getStaticProps({ locale }) { // Récupérez le locale dans getStaticProps
+  const allPortfolioPost = locale === 'en' ? await getAllPortfolioPostEN() : await getAllPortfolioPost();
+
   return {
     props: {
       allPortfolioPost: allPortfolioPost,
@@ -27,6 +28,7 @@ export async function getStaticProps() {
 
 export default function Home({ allPortfolioPost }) {
   const landingT = useScopedI18n("landing");
+  // const footerLinks = getFooterLinks(landingT);
   const router = useRouter();
   const lang = router.locale || 'fr'; // Récupération de la langue actuelle (fr par défaut)
   const selectedJobDetails = jobsDetails(lang); // Récupération des expériences en fonction de la langue
@@ -45,9 +47,18 @@ export default function Home({ allPortfolioPost }) {
               <p data-aos="fade-up" dangerouslySetInnerHTML={{ __html: landingT('presentation') }} />
             </div>
 
-            <div className='Social' data-aos="fade-up">
+            {/* <div className='Social' data-aos="fade-up">
               <h4>{landingT('social')}</h4>
-            </div>
+              <ul>
+              {footerLinks
+                .filter(link => link.type === "lien") // Filtrage des liens du menu
+                .map((link) => (
+                  <li key={link.link}>
+                    <Link href={link.link}>{link.slug}</Link>
+                  </li>
+              ))}
+              </ul>
+            </div> */}
           </div>
 
           <div className='pdp'>

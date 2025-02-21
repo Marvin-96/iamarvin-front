@@ -4,15 +4,16 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Main from '@/components/main';
 import FeatureImage from '@/components/feature-image';
-import { getAllPortfolioPost } from '@/libs/posts';
+import { getAllPortfolioPost , getAllPortfolioPostEN } from '@/libs/posts';
 import { PostGrid, AlbumPreview, albumPresentation } from './mes-projets.module.scss';
 import Head from 'next/head';
 import HeroSection from '@/components/hero-section';
 import ProjectPreview from '@/components/project-preview';
 import { useI18n, useScopedI18n } from '@/locales'; // Import des traductions
 
-export async function getStaticProps() {
-  const allPortfolioPost = await getAllPortfolioPost();
+ 
+export async function getStaticProps({ locale }) { // Récupérez le locale dans getStaticProps
+  const allPortfolioPost = locale === 'en' ? await getAllPortfolioPostEN() : await getAllPortfolioPost();
 
   return {
     props: {
@@ -39,7 +40,7 @@ export default function MesProjets({ allPortfolioPost }) {
       <Main>
         <div>
           <div className={albumPresentation}>
-            <h2>{projectsT('latest_projects')}</h2>
+            <h2 data-aos="zoom-out-down">{projectsT('latest_projects')}</h2>
             {/* <p>{projectsT('photo_description')}</p> */}
           </div>
 

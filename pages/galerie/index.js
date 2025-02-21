@@ -39,7 +39,7 @@ export default function Galerie({ allGaleriePosts }) {
 
       <Main>
         <div>
-          <div className={albumPresentation}>
+          <div data-aos="zoom-out-down" className={albumPresentation}>
             <h2>{galleryT('latest_albums')}</h2>
             <p>{galleryT('albums_description')}</p>
           </div>

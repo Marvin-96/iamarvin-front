@@ -23,16 +23,16 @@ export default function MonProfil() {
       <Main>
         <div className={section}>
           <div className={jobPresetation}>
-            <h2>{profilT('job_experience')}</h2>
+            <h2 data-aos="zoom-out-down">{profilT('job_experience')}</h2>
             {selectedJobDetails.map((job, index) => {
               if (index < 3) {
                 return (
                   <Jobdetail 
                     key={job.id}
                     name={job.name}
-                    role={`${profilT('job_details.role')}: ${job.role}`}
-                    description={`${profilT('job_details.description')}: ${job.description}`}
-                    date={`${profilT('job_details.date')}: ${job.date}`}
+                    role={`${job.role}`}
+                    description={`${job.description}`}
+                    date={`${job.date}`}
                   />
                 );
               }

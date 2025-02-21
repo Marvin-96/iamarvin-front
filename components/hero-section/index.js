@@ -6,7 +6,7 @@ import BackButton from '../back-button';
 
 export default function HeroSection({BgImage, PageName }) {
   return(
-    <div  data-aos="fade-down" 
+    <div  data-aos="zoom-out-down" 
     data-aos-duration="600" 
     className={heroSection}
     >

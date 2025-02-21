@@ -78,7 +78,7 @@ export default function Galerie( {postData ,featuredImageUrl } ){
                                 <h1 data-aos="fade-down" data-aos-duration="1500"> { postData.title } </h1>
                                 
                                 {postData.tags.nodes.map(tag => (
-                                <h2> {tag.name} </h2>
+                                <h2 data-aos="zoom-out-down"> {tag.name} </h2>
                                 ))}
                                       <div data-aos="fade-up" data-aos-duration="1500" className={frontImage}>
                                       { featuredImageUrl &&  
