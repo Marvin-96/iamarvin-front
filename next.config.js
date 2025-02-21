@@ -11,7 +11,7 @@ const nextConfig = {
     ]
   },
   i18n: {
-    locales: ['en', 'fr'], 
+    locales: ['fr','en'], 
     defaultLocale: 'fr',  // Remettre fr comme langue par défaut
   }
 }
