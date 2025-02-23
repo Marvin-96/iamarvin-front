@@ -13,6 +13,9 @@ import { I18nProvider } from '@/locales';
 
 function App({ Component, pageProps }) {
 
+  const router = useRouter();
+  const locale = router.locale || 'fr'; 
+
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -36,7 +39,7 @@ function App({ Component, pageProps }) {
   };
 
   return (
-    <I18nProvider locale="fr"> {/* Mets la langue par défaut ici */}
+    <I18nProvider locale={locale}> 
       <>
         {/* <motion.div {...anim(opacity)}> */}
         <Header />
