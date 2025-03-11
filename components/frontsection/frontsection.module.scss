@@ -24,41 +24,65 @@
   // Title styles
   h1 {
     text-transform: uppercase;
-    font-size: 13vw;
+    // font-size: 13vw;
+    font-size: 5vw;
+
+    span {
+      color: var(--primaryColor);
+    }
     
   }
 
   .headtitleWrapped {
     display: flex;
     align-items: center;
+    height: 70%;
+    margin-bottom: 50px;
   }
 
   // Video section styles
   .videoSection {
     overflow: hidden;
     display: flex;
-    border: 2px solid;
     justify-content: space-between;
     background-color: var(--bgColor);
-    height: 34vh;
+    height: 40vh;
+
     .textSection {
-      width: 50vw;
+      display: flex;
+      flex-direction: column; /* Organisation verticale */
+      justify-content: flex-start; /* Alignement en haut */
+      height: 95%; /* Assurer que la div prend toute la hauteur disponible */
+      width: 50% ;
       margin: 10px;
+    
+      .textSection2 {
+        flex-grow: 1; /* Prend tout l'espace dispo sauf celui de .menulist */
+      }
+    
+      .menulist {
+        margin-top: auto; /* Pousse la liste tout en bas */
+      }
+    
 
       p {
         font-size: 16px;
         font-family: var(--text);
+        // font-weight: 500;
         font-weight: 300;
+        // text-transform: uppercase;
         margin-bottom: 30px;
       }
 
       .scrollingButton {
         background-color:  var(--textColor);
-        font-family: var(--title);
-        text-transform: uppercase;
-        color: white;
+        // font-family: var(--title);
+        font-size: 16px;
+        // text-transform: uppercase;
+        color: var(--bgColor);
         padding: 13px 22px;
         font-size: 20px;
+        border-radius: 11px;
         
         cursor: pointer;
         text-decoration: none;
@@ -80,7 +104,7 @@
     video {
       width: auto;
       height: 100%;
-      border-left: 2px solid;
+      border-radius: var(--imgRadius);
     }
   }
   
@@ -93,8 +117,28 @@
   img {
     width: 25vw;
     height: auto;
-    margin: 60px 0 0;
+    // margin: 60px 0 0;
     border-radius: var(--imgRadius);
+  }
+
+  .menulist {
+    
+    img {
+      margin-left: 10px;
+      width: 13px;
+      // height: 13px;
+    }
+    
+    li {
+    width: auto;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 14px;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    }
   }
 }
 
@@ -132,14 +176,14 @@
 @media (max-width: 900px) {
   .frontsection {
     h1 {
-      font-size: 20vw;
+      font-size: 10vw;
       margin: 0;
     }
 
     img {
       width: 80vw;
       height: auto;
-      margin: 60px 0 0;
+      // margin: 60px 0 0;
       border-radius: var(--imgRadius);
     }
   }
@@ -151,9 +195,24 @@
     height: auto;
     
   }
+
+  .menulist {
+    margin: 30px 0 !important;
+
+    li {
+    margin: auto !important;
+    }
+
+    a{
+      margin-right: 10px ;
+    }
+    
+  }
   
   .textSection {
     margin: 31px 10px !important;
+    width: 100%;
+    
   }
   
   .videoSection { 
@@ -162,7 +221,6 @@
       height: auto !important;
       width: 100% !important;
       border-left: none !important;
-      border-top: 2px solid;
     }
     .textSection {
       width: auto !important;

@@ -93,6 +93,7 @@ export default function Home({ allPortfolioPost }) {
         <div>
           <h2 className="ProjectSectionTitle">{landingT('experiences')}</h2>
           <div className='Jobwrapped'>
+            {console.log(allPortfolioPost)}
             {selectedJobDetails.map((job, index) =>
               index < 3 ? (
                 <JobDetail

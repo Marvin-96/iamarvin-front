@@ -17,9 +17,9 @@ import {
   copyright
 } from "./footer.module.scss";
 
-import xIcon from "@/public/x-icon.svg";
-import linkedinIcon from "@/public/linkedin-icon.svg";
-import dribbbleIcon from "@/public/dribbble-icon.svg";
+import XIcon from "@/public/x-icon.svg";
+import LinkedinIcon from "@/public/linkedin-icon.svg";
+import DribbbleIcon from "@/public/dribbble-icon.svg";
 
 const Footer = () => {
   const t = useI18n(); // Récupération des traductions
@@ -61,13 +61,13 @@ const Footer = () => {
                 <h3>{t("footer.socials")}</h3>
                 <div className={links}>
                   <a href="https://twitter.com/marvin_msh" target="_blank">
-                    <li><Image src={xIcon} width={20} height={20} alt="X" /></li>
+                    <li><XIcon width={20} height={20} alt="X" /></li>
                   </a>
                   <a href="https://www.linkedin.com/in/marvin-mensah-75b774160/" target="_blank">
-                    <li><Image src={linkedinIcon} width={20} height={20} alt="LinkedIn" /></li>
+                    <li><LinkedinIcon width={20} height={20} alt="LinkedIn" /></li>
                   </a>
                   <a href="https://dribbble.com/Marvin-96" target="_blank">
-                    <li><Image src={dribbbleIcon} width={20} height={20} alt="Dribbble" /></li>
+                    <li><DribbbleIcon width={20} height={20} alt="Dribbble" /></li>
                   </a>
                 </div>
               </ul>

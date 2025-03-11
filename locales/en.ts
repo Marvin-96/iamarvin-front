@@ -13,13 +13,13 @@ export default {
   },
   landing: {
     title: "Home",
-    hi: "Hello, I'm Marvin",
+    hi: "Passionate <span>Product Designer</span>, aware of clients' needs, crafting intuitive and impactful experiences.",
     presentation: "I am a <span>Product Designer</span> graduated from <span>IIM - Digital School Paris.</span> I had the opportunity to work in a <span>French Start-Up</span> called <span>tinycoaching</span>.",
     social: "My social networks",
     projects: "Here are some of my projects!",
     experiences: "My professional experiences",
     see_cv: "View my Resume",
-    passion: "I love imagining, creating, and prototyping. Taking on projects and seeing their evolution.",
+    passion: "With 3 years of experience in Figma and expertise in web development, I am passionate about AI and its impact on design. Always seeking innovative solutions, I am open to new opportunities.",
     contact: "Contact me",
     opportunity: "I am open to new opportunities",
     experiences_list: {

@@ -111,15 +111,15 @@ export async function getSinglePost(slug) {
   return resJson.data.post;
 }
 
-export async function getPostSlugs() {
+export async function getPostSlugs(category) {
   const query = {
     query: `query getPostSlugs {
-        posts {
-          nodes {
-            slug
-          }
-        }
-      }`,
+  posts(where: {categoryName: "${category}"}) {
+    nodes {
+      slug
+    }
+  }
+}`,
   };
   const resJson = await graphqlRequest(query);
   return resJson.data.posts.nodes;

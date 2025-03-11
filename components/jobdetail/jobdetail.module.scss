@@ -3,7 +3,7 @@
 .Jobdetail {
     display: flex;
     margin:  30px 0;
-    border-bottom: 2px solid;
+    border-bottom: 2px solid var(--textColor);
     justify-content: space-between;
 
     h3 {

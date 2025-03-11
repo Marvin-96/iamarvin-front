@@ -1,0 +1,25 @@
+.themeSwitcherWrapper {
+
+display:  flex;
+justify-content: center;
+align-items: center;
+margin: 0 10px;
+button {
+    // border: var(--textColor) solid 1.5px;
+    // padding: 2px;
+    outline: none;
+    color: var(--textColor);  
+    background: none;
+    // margin: 0 40px 15px 0;
+    border: none;
+    cursor: pointer;
+    // transform: translateY(-10px);
+    
+
+    label {
+      font-family: var(--title);
+     
+    }
+  }
+
+}

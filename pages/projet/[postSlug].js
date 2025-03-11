@@ -15,15 +15,22 @@ import {
   wrapContentCentered,
 } from './slug.module.scss';
 import Main from '@/components/main';
-import { getPostSlugs, getSinglePost } from "@/libs/posts";
+import { getPostSlugs, getSinglePost , getAllPosts } from "@/libs/posts";
 import { DateYear } from "@/components/date";
 import HeroSection from "@/components/hero-section";
 import Projetfrontimage from "@/components/projet-frontimage";
 import BackButton from "@/components/back-button";
 
-export async function getStaticPaths({ locales, defaultLocale }) {
-  const postSlugs = await getPostSlugs();
+export async function getStaticPaths({ locales }) {
+  const postSlugsPortfolio = await getPostSlugs("portfolio");
+  const postSlugsPortfolioEn = await getPostSlugs("portfolio-en");
 
+  const postSlugs = [...postSlugsPortfolio, ...postSlugsPortfolioEn];
+
+  
+  
+  console.log("🚀 Slugs utilisés pour la génération :", postSlugs.map(s => s.slug));
+  
   return {
     paths: locales.flatMap((locale) =>
       postSlugs.map((s) => ({
@@ -31,11 +38,14 @@ export async function getStaticPaths({ locales, defaultLocale }) {
         locale,
       }))
     ),
-    fallback: false,
+    fallback: false, // Assurez-vous que fallback est bien sur false pour les tests
   };
 }
 
+
 export async function getStaticProps({ params, locale }) {
+
+  // {console.log( 'se',locale)}
   const postData = await getSinglePost(params.postSlug);
 
   let featuredImageUrl = "http://localhost:8888/iamarvin-back/wp-content/uploads/2024/01/default-thumb.png";
@@ -67,7 +77,7 @@ export async function getStaticProps({ params, locale }) {
 export default function Post({ postData, featuredImageUrl, locale }) {
   return (
     <>
-    {  console.log(postData)}
+    {/* {  console.log(postData)} */}
     <Head>
     <title key={postData.slug}> {postData.title} </title>
     </Head>

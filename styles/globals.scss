@@ -5,16 +5,7 @@
   box-sizing: border-box;
   animation: AppearAnim 1s;
   
-  // --primaryColor:#6665DD;
-  // --primaryColor:#6265AE;
-  --primaryColor:#a8ff76;
-  // --primaryColor:#EBE8E7;
-  --secondaryColor:#131212;
-  --bgColor: #FFF;
-  --textColor: rgb(15, 15, 15);
-  --tagColor: rgb(255, 255, 255);
-  --strongColor: var(--primaryColor);
-  --greyLinks: rgb(174, 174, 174);
+
 
   --pSize: 128px;
   --textSize: 16px;
@@ -38,7 +29,7 @@
   --projectTextPadding: 0 10vw;
   --screenMargin: 40px;
   
-  --imgRadius: 4px;
+  --imgRadius: 7px;
 
   @media  (max-width: 1024px) { 
     --thumbWidth: 100% ;
@@ -74,6 +65,45 @@
     opacity: 1;
     filter: blur(0px);
   }
+}
+
+
+.day-theme{
+
+    // --primaryColor:#6665DD;
+  // --primaryColor:#6265AE;
+  --primaryColor:#1100ff;
+  // --primaryColor:#EBE8E7;
+  --secondaryColor:#131212;
+  --bgColor: #f6f6f6;
+  // --bgColor: #000;
+  --textColor: #030800;
+  // --textColor: #fff;
+  --tagColor: rgb(255, 255, 255);
+  --strongColor: var(--primaryColor);
+  --greyLinks: rgb(174, 174, 174);
+
+}
+.night-theme{
+
+    // --primaryColor:#6665DD;
+  // --primaryColor:#6265AE;
+  --primaryColor:#1100ff;
+  // --primaryColor:#EBE8E7;
+  --secondaryColor:#d1d1d1;
+  --bgColor: #0e0e0e;
+  // --bgColor: #000;
+  --textColor: #ececec;
+  // --textColor: #fff;
+  --tagColor: rgb(255, 255, 255);
+  --strongColor: var(--primaryColor);
+  --greyLinks: rgb(52, 52, 52);
+
+}
+
+body {
+
+  background-color: var(--bgColor);
 }
 
   h2 {    
@@ -223,7 +253,7 @@
   animation: showLinksAnim 0.3s ease-in-out forwards;
   animation-delay: 0.3s;
   opacity: 0;
-  background-color: #FFF;
+  background-color:  var(--bgColor);
 
   li {
     font-size: 30px;

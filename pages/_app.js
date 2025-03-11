@@ -23,7 +23,7 @@ function App({ Component, pageProps }) {
 
 
 
-
+console.log(locale);
 
   const anim = (variants) => ({
     initial: 'initial',

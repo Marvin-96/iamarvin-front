@@ -12,7 +12,14 @@ import {
   scrollingText,
   runningLineWrapper,
   runningLine,
+  textSection2,
+  menulist,
+  ArrowIconSvg,
 } from "./frontsection.module.scss";
+
+
+import ArrowIcon from '@/public/Arrow-3.svg'
+import ArrowrightIcon from '@/public/arrow-up-right.svg'
 
 const Frontsection = () => {
   const t = useI18n(); // Utilisation du hook pour la traduction
@@ -20,42 +27,56 @@ const Frontsection = () => {
   return (
     <div className={frontsection}>
       <div className={content}>
-        <p>{t("landing.hi")},</p>
+        {/* <p>{t("landing.hi")},</p> */}
 
         <div>
           <div className={headtitleWrapped}>
-            <h1>PRODUCT DESIGNER</h1>
+            <h1 dangerouslySetInnerHTML={{ __html: t("landing.hi") }} />
           </div>
 
           <div data-aos="fade-up">
-            <div className={videoSection}>
-              <div className={textSection}>
-                <p>
-                  {t("landing.passion")}
-                </p>
-                <a
-                  href="mailto:marvinmensah95@gmail.com"
-                  className={scrollingButton}
-                >
-                  {t("landing.contact")}
-                  <Image
-                    width={150}
-                    height={150}
-                    src="https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2025/01/icons8-arrow-96.png"
-                    alt="Arrow icon"
-                  />
-                </a>
-              </div>
+                <div className={videoSection}>
 
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                src="https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2024/12/video-demo.mp4"
-              ></video>
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            src="https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2024/12/video-demo.mp4"
+                          ></video>
+                          
+                          <div className={textSection}>
+                            <div className={textSection2}>
+                                  <p>
+                                    {t("landing.passion")}
+                                  </p>
+                                  <a
+                                    href="mailto:marvinmensah95@gmail.com"
+                                    className={scrollingButton}
+                                  >
+                                    {t("landing.contact")}
+                                    <ArrowIcon                                                                                                          
+                                      alt="Arrow icon"
+                                      className={ArrowIconSvg}
+                                    />
+                                  </a>
+                            </div>
+                            <ul className={menulist}>
+                              <li> <a  href='https://iamarvin.com/iamarvin_front/media/CV-Marvin-mensah2024_compressed.pdf' target="_blank" rel="noopener noreferrer"> Voir mon CV                                      
+                              <ArrowIcon
+                                      
+                                      width={5}
+                                      height={5}
+                                     
+                                    /></a></li>
+                              
+                            
+                            </ul>
+                          </div>
+    
+      
             </div>
-
+{/* 
             <div className={scrollingText}>
               <div className={runningLineWrapper}>
                 <div className={runningLine}>
@@ -64,7 +85,8 @@ const Frontsection = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </div> */}
+
           </div>
         </div>
       </div>

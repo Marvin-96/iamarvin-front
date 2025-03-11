@@ -15,6 +15,7 @@ import {
 import BurgerBtn from "../burgerBtn";
 import Logo from "../logo";
 import LanguageSwitcher from "../language-switcher";
+import ThemeSwitcher from "../themeSwitcher";
 
 const Navbar = () => {
   const [state, setState] = useState("close");
@@ -64,6 +65,7 @@ const Navbar = () => {
         
           </ul>
           <LanguageSwitcher />
+          <ThemeSwitcher />
         </div>
 
         <BurgerBtn state={state} toggleBurger={toggleBurger} />
