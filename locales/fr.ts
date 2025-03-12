@@ -113,4 +113,4 @@ export default {
     }
 
 
-};
+} as const

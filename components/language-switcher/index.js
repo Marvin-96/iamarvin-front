@@ -7,7 +7,7 @@ function LanguageSwitcher() {
   const { locale } = router; // Pas besoin de pathname ici
 
   const targetLocale = locale === 'fr' ? 'en' : 'fr';
-  const targetLanguageLabel = locale === 'fr' ? 'En' : 'Fr';
+  const targetLanguageLabel = locale === 'fr' ? 'Fr' : 'En';
 
   const handleClick = () => {
     router.push('/', undefined, { locale: targetLocale });

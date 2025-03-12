@@ -115,4 +115,4 @@ export default {
 }
 
 
-};
+} as const
