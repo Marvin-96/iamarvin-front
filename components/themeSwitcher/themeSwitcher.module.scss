@@ -22,4 +22,14 @@ button {
     }
   }
 
+  svg{ 
+    path{
+     fill: var(--textColor);
+
+     &:hover {
+      fill: var(--primaryColor);  
+     }
+  }
+}
+
 }

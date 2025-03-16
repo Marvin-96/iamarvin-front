@@ -23,7 +23,6 @@ export async function getStaticPaths({ locales, defaultLocale }) {  // Ajout de 
   
   const postSlugs = [...postSlugsArticle, ...postSlugsArticleEn];
   
-  console.log("OUI OUI C4EST COMME CA MAGGLE", postSlugs);
 
   return {
     paths: locales.flatMap((locale) => // Utilisation de flatMap pour générer les paths pour chaque langue

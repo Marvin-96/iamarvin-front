@@ -45,7 +45,6 @@
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    background-color: var(--bgColor);
     height: 40vh;
 
     .textSection {
@@ -90,6 +89,7 @@
         &:hover {
           background-color: var(--primaryColor);
           transition: 0.5s;
+          color: var(--textColor);
         }
 
       img {

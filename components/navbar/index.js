@@ -17,6 +17,7 @@ import Logo from "../logo";
 import LanguageSwitcher from "../language-switcher";
 import ThemeSwitcher from "../themeSwitcher";
 
+
 const Navbar = () => {
   const [state, setState] = useState("close");
   const router = useRouter();

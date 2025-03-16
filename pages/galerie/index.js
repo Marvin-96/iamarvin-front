@@ -44,7 +44,9 @@ export default function Galerie({ allGaleriePosts }) {
             <p>{galleryT('albums_description')}</p>
           </div>
           <div className={PostGrid}>
+            
             {allGaleriePosts.nodes.map((post, index) => (
+              
               <div className={AlbumPreview} key={post.id}>
                 <Link href={`/galerie/${post.slug}`}>
                   <FeatureImage data-aos="fade-up" data-aos-duration='1' post={post} />

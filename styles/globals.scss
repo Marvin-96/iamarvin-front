@@ -69,7 +69,7 @@
 
 
 .day-theme{
-
+    transition: 0.2s cubic-bezier(1,.09,.61,1.02);
     // --primaryColor:#6665DD;
   // --primaryColor:#6265AE;
   --primaryColor:#1100ff;
@@ -85,7 +85,7 @@
 
 }
 .night-theme{
-
+  transition: 0.2s cubic-bezier(1,.09,.61,1.02);
     // --primaryColor:#6665DD;
   // --primaryColor:#6265AE;
   --primaryColor:#1100ff;
@@ -342,7 +342,7 @@ body {
   a {
     color: var(--textColor);
     font-weight: 200;
-    border: 1px solid;
+    border: 1px solid var(--textColor);
     border-radius: 30px;
     padding: 3px 10px;
     text-transform: uppercase;
@@ -412,8 +412,9 @@ body {
     left: -10rem;
     width: calc(100% + 20rem);
     height: calc(100% + 20rem);
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
-    opacity: 0.09;
+    // background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
+    background-image: url(https://media.licdn.com/dms/image/v2/C5112AQEeJgZn1u0IGw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1560439355433?e=2147483647&v=beta&t=eBeyGwvIycaDKz2FjJSVMPjrDp_hbfNLu8NKBr-TzFA);
+    opacity: 0.06;
     pointer-events: none; /* Assurer que le bruit ne bloque pas les clics */
     z-index: 9999;
     animation: noise 1s steps(2) infinite;

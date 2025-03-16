@@ -9,7 +9,7 @@ import Link from "next/image"
 
 export async function getStaticProps({params}){ 
   const postData = await getSinglePost(params.albumSlug);
-  console.log(postData);
+  
   
   let featuredImageUrl = "http://localhost:8888/iamarvin-back/wp-content/uploads/2024/01/default-thumb.png";
   
@@ -43,7 +43,7 @@ export async function getStaticProps({params}){
 }
 
 export async function getStaticPaths(){ 
-  const albumSlugs = await getPostSlugs();
+  const albumSlugs = await getPostSlugs('galerie');
 
   return {
     paths: albumSlugs.map((s) => (
@@ -61,7 +61,7 @@ export async function getStaticPaths(){
 export default function Galerie( {postData ,featuredImageUrl } ){ 
   return(
     <>
-    {/* {  console.log(postData)} */}
+    
     <Head>
     <title key={postData.slug}> {postData.title} </title>
     </Head>

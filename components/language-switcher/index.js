@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { languageSwitcherBotton } from './language-switcher.module.scss'
+import WorldIcon from '@/public/tabler_world.svg'
 
 function LanguageSwitcher() {
   const router = useRouter();
@@ -15,8 +16,8 @@ function LanguageSwitcher() {
 
   return (
     <Link href="/" locale={targetLocale} onClick={handleClick} className={languageSwitcherBotton}>
-        <img src='https://iamarvin.com/megaincrediblebackoffice/wp-content/uploads/2025/02/tabler_world.jpg'></img>
-      
+       
+        <WorldIcon  />
         {targetLanguageLabel}
   
     </Link>

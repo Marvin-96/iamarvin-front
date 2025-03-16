@@ -54,11 +54,13 @@ h3 {
 }
 
 h3::after {
-    content: "✦"; /* Ajoute le numéro/décimale comme contenu */
+    content: "✱"; /* Ajoute le numéro/décimale comme contenu */
     // color: red; /* Couleur spécifique pour la décimale */
     
     margin: 10px;
-    transform: translateX(20px) translateY( 10px);
+    transform:  translateY( - 20px);
+    position: absolute;
+
      /* Ajuste selon vos besoins pour aligner correctement */
 }
 

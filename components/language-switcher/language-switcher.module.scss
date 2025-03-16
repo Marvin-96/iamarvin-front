@@ -1,18 +1,29 @@
 .languageSwitcherBotton {
+  margin-left: 7vw;
+  display: flex;
+  align-items: center;
+  border: solid 1px var(--textColor);
+  border-radius: 10px;
+  padding: 4px;
+  transition: all 0.3s ease;
+
+  &:hover {  
+    color: var(--primaryColor);
+    border-color: var(--primaryColor);
     
-    margin-left: 7vw ;
-    display: flex;
-    align-items: center;
-    border: solid 1px var(--textColor);
-    border-radius: 10px;
-    padding: 4px;
-
-    :hover {
-        background-color: var(--primaryColor);
+    svg path:nth-child(2) {  
+      fill: var(--primaryColor); // Change bien la couleur du path au hover
     }
+  }
 
-    img {
-        width: 20px;
-        margin-right: 10px ;
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+    path:nth-child(2) {
+      fill: var(--textColor);  // Couleur par défaut
+      transition: fill 0.3s ease;  // Animation fluide
     }
+  }
 }

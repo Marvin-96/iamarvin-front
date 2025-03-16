@@ -21,6 +21,7 @@ import {
 import ArrowIcon from '@/public/Arrow-3.svg'
 import ArrowrightIcon from '@/public/arrow-up-right.svg'
 
+
 const Frontsection = () => {
   const t = useI18n(); // Utilisation du hook pour la traduction
 
@@ -58,17 +59,21 @@ const Frontsection = () => {
                                     <ArrowIcon                                                                                                          
                                       alt="Arrow icon"
                                       className={ArrowIconSvg}
+                                      style={{ marginLeft: "20px" }}
                                     />
                                   </a>
                             </div>
                             <ul className={menulist}>
-                              <li> <a  href='https://iamarvin.com/iamarvin_front/media/CV-Marvin-mensah2024_compressed.pdf' target="_blank" rel="noopener noreferrer"> Voir mon CV                                      
-                              <ArrowIcon
-                                      
-                                      width={5}
-                                      height={5}
-                                     
-                                    /></a></li>
+                              <li> 
+                                
+                                <a  href='https://iamarvin.com/iamarvin_front/media/CV-Marvin-mensah2024_compressed.pdf' target="_blank" rel="noopener noreferrer"> Voir mon CV                                      
+                                <ArrowIcon                                                                                                          
+                                      alt="Arrow icon"
+                                      className={ArrowIconSvg}
+                                      style={{ marginLeft: "20px", fill: "var(--textColor)" }}
+                                    />
+                                    
+                                    </a></li>
                               
                             
                             </ul>
