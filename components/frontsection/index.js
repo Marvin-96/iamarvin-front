@@ -15,6 +15,8 @@ import {
   textSection2,
   menulist,
   ArrowIconSvg,
+  contentList,
+  arrowBotton,
 } from "./frontsection.module.scss";
 
 
@@ -59,24 +61,34 @@ const Frontsection = () => {
                                     <ArrowIcon                                                                                                          
                                       alt="Arrow icon"
                                       className={ArrowIconSvg}
-                                      style={{ marginLeft: "20px" }}
+                                      style={{ marginLeft: "20px", fill: "var(--bgColor"} }
                                     />
                                   </a>
                             </div>
-                            <ul className={menulist}>
-                              <li> 
+                            <div className={contentList}>
+                                <ul className={menulist}>
+                                  <li> 
+                                    
+                                    <a  href='https://iamarvin.com/iamarvin_front/media/CV-Marvin-mensah2024_compressed.pdf' target="_blank" rel="noopener noreferrer"> {t('landing.see_cv')}                                  
+                                    <ArrowIcon                                                                                                          
+                                          alt="Arrow icon"
+                                          className={ArrowIconSvg}
+                                          style={{transform: 'rotate(-45deg)', marginLeft: "20px", fill: "var(--textColor"}}
+                                        />
+                                        
+                                        </a></li>
+                                  
                                 
-                                <a  href='https://iamarvin.com/iamarvin_front/media/CV-Marvin-mensah2024_compressed.pdf' target="_blank" rel="noopener noreferrer"> Voir mon CV                                      
-                                <ArrowIcon                                                                                                          
+                                </ul>
+                   
+
+                          <div className={arrowBotton}>   
+                            <ArrowIcon                                                                                                          
                                       alt="Arrow icon"
                                       className={ArrowIconSvg}
-                                      style={{ marginLeft: "20px", fill: "var(--textColor)" }}
-                                    />
-                                    
-                                    </a></li>
-                              
-                            
-                            </ul>
+                                      style={{transform: 'rotate(45deg) scale(3.5)', fill: "var(--bgColor)"}}
+                                    /> </div>
+                          </div>
                           </div>
     
       

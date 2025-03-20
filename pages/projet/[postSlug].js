@@ -29,7 +29,7 @@ export async function getStaticPaths({ locales }) {
 
   
   
-  console.log("🚀 Slugs utilisés pour la génération :", postSlugs.map(s => s.slug));
+  // console.log("🚀 Slugs utilisés pour la génération :", postSlugs.map(s => s.slug));
   
   return {
     paths: locales.flatMap((locale) =>

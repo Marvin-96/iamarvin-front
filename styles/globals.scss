@@ -79,9 +79,8 @@
   // --bgColor: #000;
   --textColor: #030800;
   // --textColor: #fff;
-  --tagColor: rgb(255, 255, 255);
-  --strongColor: var(--primaryColor);
-  --greyLinks: rgb(174, 174, 174);
+  
+  
 
 }
 .night-theme{
@@ -93,11 +92,11 @@
   --secondaryColor:#d1d1d1;
   --bgColor: #0e0e0e;
   // --bgColor: #000;
-  --textColor: #ececec;
+  --textColor: #eff0ff;
   // --textColor: #fff;
-  --tagColor: rgb(255, 255, 255);
-  --strongColor: var(--primaryColor);
-  --greyLinks: rgb(52, 52, 52);
+  
+
+  
 
 }
 
@@ -414,7 +413,7 @@ body {
     height: calc(100% + 20rem);
     // background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
     background-image: url(https://media.licdn.com/dms/image/v2/C5112AQEeJgZn1u0IGw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1560439355433?e=2147483647&v=beta&t=eBeyGwvIycaDKz2FjJSVMPjrDp_hbfNLu8NKBr-TzFA);
-    opacity: 0.06;
+    opacity: 0.04;
     pointer-events: none; /* Assurer que le bruit ne bloque pas les clics */
     z-index: 9999;
     animation: noise 1s steps(2) infinite;

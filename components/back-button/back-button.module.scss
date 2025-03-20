@@ -1,21 +1,16 @@
 .goBack {
-  border: 2px;
-  // background: var(--secondaryColor);
-  // background: var(--secondaryColor);
-  // color: var(--bgColor);
-  color: var(--secondaryColor);
   padding: 10px 20px; 
   border-radius: 30px;
-  border: 2px var(--secondaryColor) solid;
+  border: 2px var(--textColor) solid;
   text-decoration: none;
-  // font-family: var(--title);
   text-transform: uppercase;
 }
 
 .goBack:hover {
   background-color: var(--primaryColor);
   transition: 0.4s;
-  color: var(--bgColor);
+  color: var(--textColor);
+  border: 2px var(--primaryColor) solid;
 }
 
 .arrowleft {
