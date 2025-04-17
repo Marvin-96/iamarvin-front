@@ -57,22 +57,30 @@ const Footer = () => {
 
             {/* Section Réseaux Sociaux */}
             <div>
-              <ul>
                 <h3>{t("footer.socials")}</h3>
-                <div className={links}>
-                  <a href="https://twitter.com/marvin_msh" target="_blank">
-                    <li><XIcon width={20} height={20} alt="X" /></li>
-                  </a>
-                  <a href="https://www.linkedin.com/in/marvin-mensah-75b774160/" target="_blank">
-                    <li><LinkedinIcon width={20} height={20} alt="LinkedIn" /></li>
-                  </a>
-                  <a href="https://dribbble.com/Marvin-96" target="_blank">
-                    <li><DribbbleIcon width={20} height={20} alt="Dribbble" /></li>
-                  </a>
-                </div>
-              </ul>
-            </div>
+                <ul className={links}>
+                  <li>
+                    <a href="https://twitter.com/marvin_msh" target="_blank" rel="noopener noreferrer">
+                      X (twitter)
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/marvin-mensah-75b774160/" target="_blank" rel="noopener noreferrer">
+                      LinkedIn
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://dribbble.com/Marvin-96" target="_blank" rel="noopener noreferrer">
+                      Dribbble
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+
+
           </div>
+
         </div>
 
         {/* Section Copyright */}

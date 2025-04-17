@@ -17,7 +17,7 @@ img {
 
 .renderStyle {
 
-    --blockPaddingVER: 80px;
+    --blockPaddingVER: 88px ;
 
 
     display: block !important;
@@ -26,7 +26,7 @@ img {
     img , video {
     max-width: 100%;
     height: auto;
-    padding: var(--blockPaddingVER) 0;
+    margin: var(--blockPaddingVER) 0;
     align-items: center;
     align-content: center;
     

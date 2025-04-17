@@ -64,13 +64,13 @@
         
 
         .contactSection {
+          color: var(--textColor);
 
           p {
             font-weight: 300;
             font-size: 40px;
           }
 
-          color: var(--bgColor);
           a {
           font-size:  16px;
         
@@ -80,39 +80,49 @@
         }
       }
 
-    .linksection {
-              display: flex;
-              flex-direction: row-reverse;
-              height: 100%;
-              width: 40vw;
+      .linksection {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 100%;
+        width: 40vw;
+        justify-content: space-between;
+
+        .menuSection {
+          list-style: none;
+        }
+        
+        a {
+          text-decoration: none;
+          
+        }
+      
+        ul.links {
+          padding: 0;
+          margin: 0;
+      
+          li {
+            list-style: none;
+            padding: 4px 0;
+      
+            a {
+              padding-right: 15px;
               color: var(--bgColor);
-              justify-content: space-between;
-
-                      .links {
-                        display: flex;
-
-                        a {
-                          padding-right:  15px;
-                        }
-
-                      }
-
-                      a {                    
-                        text-decoration: none;
-                        color: var(--bgColor);
-                      }
-                 
-                      li {
-                        padding: 6px 0;
-                        
-                        list-style: none;
-                        
-                      }
-
-               
-
-
+              transition: color 0.3s;
+      
+              &:hover {
+                color: #0077ff; // par exemple pour hover
+              }
+            }
           }
+        }
+      
+        // .emailSection {
+        //   display: flex;
+        //   background-color: none;
+        //   // padding: 0 20vh;
+        // }
+      }
+      
           // .emailSection {
 
           //   display: flex;
@@ -155,9 +165,7 @@
         width: 90vw;
         justify-content: center;
       }
-      // .linksection {
-      //   padding: 30px;
-      // }
+
     
       }
           .linksection {

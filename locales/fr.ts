@@ -18,7 +18,7 @@ export default {
     social: "Mes réseaux",
     projects: "Voici quelques-uns de mes projets !",
     experiences: "Mes expériences professionnelles",
-    see_cv: "Voir mon Curriculum vitae",
+    see_cv: "Mon CV",
     passion: "Fort de 3 ans d’expérience sur Figma et d’une expertise en développement web, je suis passionné par l'IA et son impact sur le design. Toujours à la recherche de solutions innovantes, je suis ouvert à de nouvelle opportunité",
     contact: "Me Contacter",
     opportunity: "Je suis ouvert aux nouvelles opportunités",

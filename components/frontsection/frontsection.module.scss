@@ -100,7 +100,7 @@
         // text-transform: uppercase;
         color: var(--bgColor);
         padding: 13px 22px;
-        font-size: 20px;
+        font-size: var(--text);
         border-radius: 11px;
         
         cursor: pointer;
@@ -109,7 +109,6 @@
         &:hover {
           background-color: var(--primaryColor);
           transition: 0.5s;
-          color: var(--textColor);
         }
 
       img {
@@ -142,6 +141,7 @@
   }
 
   .menulist {
+
     
     img {
       margin-left: 10px;

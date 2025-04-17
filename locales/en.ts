@@ -18,9 +18,9 @@ export default {
     social: "My social networks",
     projects: "Here are some of my projects!",
     experiences: "My professional experiences",
-    see_cv: "View my Resume",
+    see_cv: "My Resume",
     passion: "With 3 years of experience in Figma and expertise in web development, I am passionate about AI and its impact on design. Always seeking innovative solutions, I am open to new opportunities.",
-    contact: "Contact me",
+    contact: "Let's talk!",
     opportunity: "I am open to new opportunities",
     experiences_list: {
       tinycoaching: {
@@ -97,7 +97,7 @@ export default {
 },
 
 "footer": {
-  "contactMe": "Contact me!",
+  "contactMe": "Let's talk!",
   "menu": "Menu",
   "socials": "My Socials",
   "rights": "All rights reserved",

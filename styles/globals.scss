@@ -7,8 +7,8 @@
   
 
 
-  --pSize: 128px;
-  --textSize: 16px;
+  
+  --textSize: 18px;
   --pArticleSize: 27px;
   --titleSize: 30px;
   --portfolioTitleSize: 90px;
@@ -99,6 +99,44 @@
   
 
 }
+
+.wp-block-table {
+  padding: 60px 0px;
+  
+
+  table {
+
+    font-family: var(--text);
+    width: 100%;
+    border-collapse: collapse; // Fusionne les bordures des cellules
+    border: 1px solid var(--textColor); // Bordure de la table, tu peux personnaliser la couleur et l'épaisseur
+    
+
+  }
+
+  td {
+    
+    border: 1px solid var(--textColor); // Bordure autour des cellules
+    padding: 15px; // Espace autour du texte dans les cellules
+    text-align: left; // Aligne le texte à gauche dans les cellules
+  }
+
+  
+  // Bordure autour des en-têtes de cellules si nécessaire
+  th {
+    border: 1px solid var(--textColor); 
+    padding: 8px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block; // Change la disposition des éléments de la table en bloc
+  }
+
+}
+
 
 body {
 
@@ -200,7 +238,7 @@ body {
     width: 90%;    
     p {
       font-weight: 300;
-      font-size: 40px;
+      font-size: 30px;
     }
 
     span {
@@ -440,6 +478,99 @@ body {
 
   }
 
+
+
+
+
+
+  .wp-block-media-text {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+    // p {
+    //   padding: 0 10px !important;
+    // }
+    p {
+      padding: 0 !important;
+    }
+  }
+  
+  .wp-block-media-text__content {
+    flex: 1 1 40%;
+    // margin:0  60px;
+    margin: 0 118px;
+  }
+  
+  .wp-block-media-text__media {
+    flex: 0 1 38%;
+    display: flex;
+    justify-content: center;
+
+  }
+  
+
+  .is-layout-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      padding: 0 !important;
+    }
+  }
+
+// .wp-container-core-columns-is-layout-1 {
+//   padding: ;
+// }
+
+  .proto-demo-video  {
+    display: block;
+    width: 20vw;
+
+    border-radius: 30px;
+    outline: none;
+
+  }
+
+  .container-middle-size {
+    margin: 0 12vw;
+  }
+  
+  .p-size {
+    width: 40vw;
+  }
+
+  @media  (max-width: 1000px) 
+    {
+          .wp-block-media-text {
+            display: block;
+          }
+    }
+  @media  (max-width: 400px) 
+    {
+      .container-middle-size {
+        margin: 60px 0;
+        display: block;
+
+        .p-size {
+          width: 90vw;
+        }
+
+        .proto-demo-video  {
+          margin: 60px 0;
+          width: 60vw;
+      
+          border-radius: 10px;
+          outline: none;
+      
+        }
+      }
+      
+    }
+
+
+
 ///////////////////////
 
 
@@ -606,6 +737,7 @@ body {
 .wp-block-group__inner-container {
   // margin: 10px !important;
 }
+
 
 
 
