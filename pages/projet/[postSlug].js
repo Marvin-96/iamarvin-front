@@ -19,6 +19,7 @@ import { getPostSlugs, getSinglePost , getAllPosts } from "@/libs/posts";
 import { DateYear } from "@/components/date";
 import HeroSection from "@/components/hero-section";
 import Projetfrontimage from "@/components/projet-frontimage";
+import NewProjetfrontimage from "@/components/newprojet-frontimage";
 import BackButton from "@/components/back-button";
 
 export async function getStaticPaths({ locales }) {
@@ -82,9 +83,12 @@ export default function Post({ postData, featuredImageUrl, locale }) {
     <title key={postData.slug}> {postData.title} </title>
     </Head>
     
-   
+    
+    { featuredImageUrl &&  <NewProjetfrontimage  postData={postData} title={postData.title}  BgImage={featuredImageUrl}/> }  
+                              
 
-    { featuredImageUrl &&  <Projetfrontimage  BgImage={featuredImageUrl}/> } 
+
+    {/* { featuredImageUrl &&  <Projetfrontimage  BgImage={featuredImageUrl}/> }  */}
     <Main>
     <div className={wrapContent}>
  
@@ -92,31 +96,14 @@ export default function Post({ postData, featuredImageUrl, locale }) {
       <div>
       <div className={postdataContent}>
 
-            <BackButton></BackButton>
 
             <div className={slugMeta}>
                   <div className={accroche}>
-                  {/* <h4> Dernière modification par Marvin le <Date dateString={postData.modified} /> </h4> */}
-                  <h1> { postData.title } </h1>
+                  {/* <h4> Dernière modification par Marvin le <Date dateString={postData.modified} /> </h4> */}                
                   <h2> {postData.excerpt.replace(/<\/?[^>]+(>|$)/g, "")}</h2>
                   
                   </div>
-                  
-                  <div className={rSection}>
-                            <div className={dateSection}>
-                              <p> Année </p>
-                              <DateYear dateString={postData.date} />
-                            </div>
-
-                            <div className={tagSection}>
-                                <p> Réalisations </p>
-                                <ul>
-                                {postData.tags.nodes.map(tag => (
-                                <li  className={projectTag} key={tag.id}> {tag.name} </li>
-                                ))}
-                                </ul>
-                            </div>
-                  </div>
+               
             </div>
 
       </div>

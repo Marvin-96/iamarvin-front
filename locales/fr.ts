@@ -49,13 +49,19 @@ export default {
   "projects": {
   "page_title": "Mes projets",
   "latest_projects": "Mes derniers Projets",
-  "photo_description": "Voici une sélection de mes photos. Je prends mes photos avec un Fujifilm X-S10 avec un objectif 15-45mm. J'utilise également un iPhone 15 Pro Max."
+  "photo_description": "Voici une sélection de mes photos. Je prends mes photos avec un Fujifilm X-S10 avec un objectif 15-45mm. J'utilise également un iPhone 15 Pro Max.",
+  "date_year": "Année",
+  "single_projet_name": "Projets",
+  "achievements": "Réalisations",
+  "scrolling_text": "scroller pour voir le projet"
+
 },
 "gallery": {
   "title": "Galerie",
   "page_name": "Ma Galerie",
   "latest_albums": "Mes derniers Albums",
-  "albums_description": "Voici une sélection de mes photos. Je prends mes photos avec un Fujifilm X S-10 avec un objectif 15-45mm. J'utilise également un iPhone 15 Pro Max."
+  "albums_description": "Voici une sélection de mes photos. Je prends mes photos avec un Fujifilm X S-10 avec un objectif 15-45mm. J'utilise également un iPhone 15 Pro Max.",
+  
 },
 "blog": {
     "title": "Blog",

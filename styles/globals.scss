@@ -27,9 +27,9 @@
   
 
   --projectTextPadding: 0 10vw;
-  --screenMargin: 40px;
+  --screenMargin: 30px;
   
-  --imgRadius: 7px;
+  --imgRadius: 4px;
 
   @media  (max-width: 1024px) { 
     --thumbWidth: 100% ;
@@ -579,9 +579,6 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  h1 {
-    font-size: 18vw;
-  }
 }
 
 

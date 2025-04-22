@@ -49,7 +49,11 @@ export default {
 "projects": {
 "page_title": "My Projects",
 "latest_projects": "My Latest Projects",
-"photo_description": "Here is a selection of my photos. I take my pictures with a Fujifilm X-S10 with a 15-45mm lens. I also use an iPhone 15 Pro Max."
+"photo_description": "Here is a selection of my photos. I take my pictures with a Fujifilm X-S10 with a 15-45mm lens. I also use an iPhone 15 Pro Max.",
+"date_year": "Year",
+"single_projet_name": "Project",
+"achievements": "Achievements",
+"scrolling_text": "scroll to see the project"
 },
 
 "gallery": {
