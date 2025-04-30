@@ -1,4 +1,9 @@
+html , body {
+  margin: 0; 
+}
+
 * { 
+
 
   margin: 0;
   padding: 0; 
@@ -8,9 +13,11 @@
 
 
   
-  --textSize: 18px;
+  --textSize: 14px;
+
   --pArticleSize: 27px;
-  --titleSize: 30px;
+  --titleSize: 28px;
+
   --portfolioTitleSize: 90px;
   --detailSize: 15px;
 
@@ -21,13 +28,13 @@
 
 
   --thumbHeight: 17vw;
-  --thumbWidth: 31vw ; 
+  --thumbWidth: 27vw ; 
   --gridPadding: 120px; 
 
   
 
   --projectTextPadding: 0 10vw;
-  --screenMargin: 30px;
+  --screenMargin: 8vw;
   
   --imgRadius: 4px;
 
@@ -153,7 +160,7 @@ body {
   }
 
   h3, h4 ,li {
-    font-size: 16px;
+    font-size: 14px;
     font-family: var(--text);
     font-weight: 300;
     color: var(--textColor);
@@ -541,6 +548,9 @@ body {
     width: 40vw;
   }
 
+  .small-margin-left {
+    margin-left: 100px;
+  }
   @media  (max-width: 1000px) 
     {
           .wp-block-media-text {
@@ -605,7 +615,7 @@ body {
 }
 
 .Jobwrapped {
-  margin-left: 40vw;
+  margin-left: 30vw;
 }
 
 

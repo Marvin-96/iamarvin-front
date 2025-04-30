@@ -31,8 +31,9 @@ export default function FeatureImage({post}) {
    <div className={imgWrapper}>
     <Image  className={innerImg}
             src={img.src} 
-            width={600} 
-            height={600}  
+            style={{objectFit:"cover"}}
+            height={img.height} 
+            width={img.width} 
             alt={post.title} 
     /> 
     </div>

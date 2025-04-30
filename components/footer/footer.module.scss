@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   height: auto;
+  padding: 0 var(--screenMargin);
 
   p, a , h3 {
     color: var(--bgColor);

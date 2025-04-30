@@ -73,7 +73,7 @@ const Frontsection = () => {
                                     <ArrowIcon                                                                                                          
                                           alt="Arrow icon"
                                           className={ArrowIconSvg}
-                                          style={{transform: 'rotate(-45deg)', marginLeft: "20px", fill: "var(--textColor"}}
+                                          style={{transform: 'rotate(-45deg) translateY(2px)', marginLeft: "20px", fill: "var(--textColor"}}
                                         />
                                         
                                         </a></li>
