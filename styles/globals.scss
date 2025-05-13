@@ -254,6 +254,25 @@ body {
     }
    } 
 
+   .skillstxt {
+    width: 40vw;
+
+    * {
+    font-size: 17px;
+   }
+
+   li {
+    margin: 20px 0;
+   }
+
+   }
+
+   @media (max-width: 765px) {
+    .skillstxt { 
+      width: auto;
+    }
+   }
+
    .working-illustration {
       margin-left: 50px;
       background-color: var(--primaryColor);

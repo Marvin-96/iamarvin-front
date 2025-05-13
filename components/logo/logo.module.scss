@@ -6,7 +6,9 @@
   z-index: 22;
   font-size: 20px;
   text-align: center;
-  margin: auto 0;
+  padding: 10px 0;
+  border-left: 1px solid var(--textColor) ;
+  padding-left: 12px;
   font-family: var(--title);
   font-weight: 400;
   text-transform: uppercase;

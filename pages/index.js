@@ -43,8 +43,25 @@ export default function Home({ allPortfolioPost }) {
       <Main>
         <section className='content'>
           <div>
-            <div className='presentationtxt'>
-              <p data-aos="fade-up" dangerouslySetInnerHTML={{ __html: landingT('presentation') }} />
+            <div className='presentationtxt' data-aos="fade-up" >
+              <p dangerouslySetInnerHTML={{ __html: landingT('presentation') }} />
+              
+              <div className='skillstxt'>
+              <ul>
+                    <li>
+                      <strong>{landingT('skills.projectManagement.title')}</strong> :<br/> {landingT('skills.projectManagement.description')} 
+                    </li>
+                    <li>
+                      <strong>{landingT('skills.webDevelopment.title')}</strong> :<br/> {landingT('skills.webDevelopment.description')} 
+                    </li>
+                    <li>
+                      <strong>{landingT('skills.uxuiDesign.title')}</strong> :<br/> {landingT('skills.uxuiDesign.description')} 
+                    </li>
+                  </ul>
+
+            </div>
+
+
             </div>
 
             {/* <div className='Social' data-aos="fade-up">

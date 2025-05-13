@@ -1,10 +1,12 @@
 .languageSwitcherBotton {
-  margin-left: 7vw;
+  margin-left: 30px;
   display: flex;
   align-items: center;
   border: solid 1px var(--textColor);
-  border-radius: 7px;
-  padding: 4px 2px;
+  // border-radius: 7px;
+  border-top: none;
+  border-bottom: none;
+  padding: 4px 15px;
   transition: all 0.3s ease;
   font-size: 12px;
 

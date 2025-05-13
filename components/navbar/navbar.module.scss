@@ -5,11 +5,11 @@
     position: fixed;
     width: 100vw;
     // height: 40px;
-    padding: 0px var(--screenMargin);
+    // padding: 0px var(--screenMargin);
     justify-content: center;
     z-index: 10;
     text-transform: uppercase;
-  
+    
     
     
 
@@ -18,9 +18,10 @@
   .navbarcontent {
     justify-content: space-between;
     display: flex;
-    width: 98vw;
-    padding: 8px 0;
+    width: 100vw;
+    padding: 0px var(--screenMargin);
     border-bottom: 1px  var(--textColor) solid;
+    
 }
 
   .menu   {
@@ -29,12 +30,13 @@
       justify-content: space-around;
       height: 30px;
       width: 90vw;  
+      
     }
   
   
     .rightmenu {
       right: 0pt;
-
+      border-left: 1px solid var(--textColor);
       display: flex;
       /* width: 15%; */
       a {
@@ -99,7 +101,7 @@
         font-weight: 500;
         color: var(--bgColor)
       }
-    
+     
       // padding: 0px 5vw;
     }
   
@@ -108,6 +110,9 @@
       
     }
 
+    .rightmenu {
+      border: none;
+    }
     .linksSection {
       margin-left: 0px;
       font-size: 15vw;

@@ -15,6 +15,21 @@ export default {
     title: "Home",
     hi: "Passionate <span>Product Designer</span>, aware of clients' needs, crafting intuitive and impactful experiences.",
     presentation: "I am a <span>Product Designer</span> graduated from <span>IIM - Digital School Paris.</span> I had the opportunity to work in a <span>French Start-Up</span> called <span>tinycoaching</span>.",
+    skills: {
+      projectManagement: {
+        title: "Project Management",
+        description: "Team coordination, task planning, and meeting deadlines using agile methodologies such as SCRUM."
+      },
+      webDevelopment: {
+        title: "Web Development",
+        description: "Design and integration of responsive websites using modern front-end technologies (HTML, CSS, JavaScript)."
+      },
+      uxuiDesign: {
+        title: "UX/UI Design",
+        description: "Design of intuitive and aesthetic user interfaces with Figma, using a user-centered and design thinking approach."
+      }
+    }
+  ,
     social: "My social networks",
     projects: "Here are some of my projects!",
     experiences: "My professional experiences",

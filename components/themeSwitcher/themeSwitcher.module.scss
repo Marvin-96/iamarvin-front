@@ -3,7 +3,8 @@
 display:  flex;
 justify-content: center;
 align-items: center;
-margin: 0 10px;
+padding: 0 18px;
+border-right: 1px solid var(--textColor);
 button {
     // border: var(--textColor) solid 1.5px;
     // padding: 2px;
@@ -14,6 +15,10 @@ button {
     border: none;
     cursor: pointer;
     // transform: translateY(-10px);
+
+    &:hover {
+      fill: var(--primaryColor);  
+     }
     
 
     label {
@@ -26,9 +31,7 @@ button {
     path{
      fill: var(--textColor);
 
-     &:hover {
-      fill: var(--primaryColor);  
-     }
+   
   }
 }
 
